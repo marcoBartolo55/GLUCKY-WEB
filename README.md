@@ -1,0 +1,2 @@
+# GLUCKY
+Proyecto Glucky. SARDIPUTO SE LA TRAGO
