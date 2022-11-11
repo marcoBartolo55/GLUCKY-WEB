@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="registroDoctores.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">Glucky</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Buscar...">
+         <span class="tooltip">Buscar en la página</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Panel de control</span>
+        </a>
+         <span class="tooltip">Centro de información</span>
+      </li>
+      <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Pacientes</span>
+       </a>
+       <span class="tooltip">Buscar pacientes</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Chateo con pacientes</span>
+       </a>
+       <span class="tooltip">Chatear con pacientes</span>
+     </li>
+   
+     <li>
+       <a href="#">
+         <i class='bx bx-circle' ></i>
+         <span class="links_name">Peticiones</span>
+       </a>
+       <span class="tooltip">Ver peticiones</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-book-bookmark' ></i>
+         <span class="links_name">Citas</span>
+       </a>
+       <span class="tooltip">Ver mi agenda de citas</span>
+     </li>
+     
+    
+     <li class="profile">
+         <div class="profile-details">
+           <!--<img src="profile.jpg" alt="profileImg">-->
+           <div class="name_job">
+             <div class="name">Nombre usuario</div>
+             <div class="job">Doctor</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text">
+        
+      </div>
+     
+      <div class="container">
+       
+        
+        <div class="title">Registro Glucky para doctores</div>
+        <div class="content">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Nombre</span>
+                <input type="text" placeholder="Nombre" maxlength="50" pattern="([a-zA-ZñÑáéíóúÁÉÍÓÚüÜ ']{2,25}){2,25}" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Apellidos</span>
+                <input type="text" placeholder="Apellidos" maxlength="60" pattern="([a-zA-ZñÑáéíóúÁÉÍÓÚüÜ ']{2,25})+([ ]{1})+([a-zA-ZñÑáéíóúÁÉÍÓÚüÜ ']{2,25})" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="email" placeholder="Ejemplo@gmail.com" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Edad</span>
+                <input type="number" placeholder="Edad" pattern="[0,9]{2}" pattern="[0,9]{2}" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Teléfono</span>
+                <input type="text" placeholder="Ejemplo (5544667788)" maxlength="10" minlength="10" pattern="([5]{2})+([0-9]{8})" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Cédula profesional</span>
+                <input type="text" placeholder="Escribe tu cédula profesional válida. Ejemplo: 12345678" pattern="[0-9]{8}" maxlength="8" minlength="8" required>
+              </div>
+
+              <div class="input-box">
+                <span class="details">Dirección de consultorio</span>
+                <input type="text" placeholder="Escribe la dirección de su consultorio" required>
+              </div>
+             
+              
+
+              <div class="input-box">
+                <span class="details">Sexo</span>
+                  <select name="diabetes" required>
+                    <option value="">Selecciona tu sexo</option>
+                    <option value="1">Femenino</option>
+                    <option value="2">Masculino</option>
+                    <option value="3">Prefiero no decirlo</option>
+                  </select>
+              </div>
+            
+
+              <div class="input-box">
+                <span class="details">Contraseña</span>
+                <input type="password" placeholder="Escribe tu contraseña válida. Ejemplo: ehdfEHDF12345*?'\! " pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  required>
+              </div>
+
+            </div>
+
+           
+            <input type="submit" value="Registrate" class="button">
+            
+          </form>
+        </div>
+      </div>
+
+      
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
+</body>
+</html>
