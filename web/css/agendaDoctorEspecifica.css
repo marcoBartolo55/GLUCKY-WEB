@@ -1,0 +1,484 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #E2F0F9;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details .logo_name{
+  color: #000000d5;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: rgb(0, 0, 0);
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar input{
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #cddde7;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #cddde7;
+  color: rgb(0, 0, 0);
+}
+.sidebar.open .bx-search:hover{
+  background: #cddde7;
+  color: #000000;
+}
+.sidebar .bx-search:hover{
+  color: #000000;
+}
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #ffffff;
+  color: #000000;
+}
+.sidebar li a:hover{
+  background: #FFF;
+}
+.sidebar li a .links_name{
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #cddde7;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #cddde7;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #cddde7;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+.home-section{
+  position: absolute;
+  background: #fff;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home-section .text{
+  display: none;
+  color: #2D9BF0;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: inline-block;
+  }
+}
+
+/*COMENTARIOS ACERCA DEL SIGUIENTE select*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+  }
+  body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+  }
+  .container{
+   
+    width: 99%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+   
+  }
+  .container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+  .container .title::before{
+    content: "";
+    position: center;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+
+  }
+  .content form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+  }
+  
+
+
+  div.textoarriba {
+    align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+  
+    background: #E2F0F9;
+    color: #333;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/*esta madre inicia aquí que es lo de el recuadro azúl de doctores*/
+
+
+
+  div.doctores {
+    margin: 0 auto;
+
+    /*align-items: center;*/
+
+    display: flex;
+
+    /*justify-content: center;*/
+    width: 100%;
+    text-align: left;
+  
+    background: rgba(224, 225, 230, 0);
+    color: #333;
+    border-radius: 15px;
+  
+
+}
+
+
+
+div.doctoresmenu {
+    margin: 0 auto;
+
+    display: flex;
+    height: 130px;
+    justify-content: center;
+    width: 98%;
+    text-align: center;
+    bottom: 90px;
+  
+    background: rgb(0, 42, 253);
+    color: #333;
+    border-radius: 15px;
+
+  
+}
+
+div.cuadradoblanco {
+    display: flex;
+    
+    justify-content: center;
+    width: 200px;
+    text-align: center;
+    bottom: 90px;
+  
+    background: rgb(242, 71, 38);
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+
+    align-items: center;
+    font-size: 30px;
+
+    height: auto;
+
+  
+
+}
+
+div.cuadradoblancodos {
+   position: relative;
+   
+    justify-content: right;
+    width: 60px;
+  
+    background-color: #ffffff00;
+    color: #333;
+    border-radius: 15px;
+   
+    transform: translateY(30px);
+    margin: 0 auto;
+    height: 40px;
+    width: 90%;
+    text-align: right;
+    padding-right: 20px;
+    bottom: 55px;
+
+    color: #333;
+    border-radius: 15px;
+    font-size: small;
+
+    display: flex;
+    
+}
+
+
+div.puestodoc {
+    text-align: justify;
+    height: auto;
+    width: 100%;
+    bottom: 90px;
+    background: #ff000000;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    transform: translateX(100px);
+    transform: translateY(110px);
+    align:left;
+    position: relative;
+    text-align: right;
+    font-size: small;
+    padding-right: 15px;
+
+    padding-bottom: 5%;
+    padding-left: 10px;
+
+}
+
+div.puesto{
+font-weight: bold;
+color: rgb(242, 71, 38);
+}
+
+div.nombredoc{
+    font-weight: bolder;
+}
+    
+
+
+input[type="Submit"] {
+      overflow: hidden;
+      border: none;
+      color:#000000;
+      font-weight: 500;
+      font-size: 20px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      width: 30px;
+}
+
+a:link, a:visited, a:active {
+      text-decoration:none;
+}
+
+
+div.fecha {
+
+width: 20%;
+font-weight:500;
+
+
+}
+
+div.desc{
+    position: relative;
+    display: flex;
+    background-color: #8FD14F;
+    width: auto;
+    width: 80%;
+    padding-top: 10px;
+    padding-right: 10px;
+    align-items: center;
+    top: 50%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+
+
+    border-radius: 10px;
+
+
+    border-width: 10px;
+    border: solid;
+    border-color: #70a53b;
+}
