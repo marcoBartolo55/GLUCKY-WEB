@@ -385,7 +385,7 @@ div.imagen{
   justify-content: center;
   width: 99%;
   text-align: center;
-  background-image: url(https://pbs.twimg.com/media/Evpj4K8UcAEfsNr?format=jpg&name=4096x4096) ;
+  background-color: white;
 
   color: #333;
   border-radius: 40px;
@@ -603,4 +603,5 @@ a:link, a:visited, a:active {
   .signup_link a:hover{
     text-decoration: underline;
   }
+  
   
