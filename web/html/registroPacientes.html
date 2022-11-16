@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../images/iconoglucky.ico">
     <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
-    <link rel="stylesheet" href="../css/registroPacientes.css">
+    <link rel="stylesheet" href="../css/RegistroPacientes.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
 <body>
   <div class="sidebar">
     <div class="logo-details">
@@ -114,16 +114,16 @@
               </div>
               <div class="input-box">
                 <span class="details">Teléfono</span>
-                <input type="text" placeholder="Ejemplo (5544667788)" name="TelefonoForm" minlength="10" maxlength="10" pattern="([5]{2})+([0-9]{8})" required>
+                <input type="text" placeholder="Ejemplo (5544667788)" name="TelefonoForm" minlength="10" maxlength="10" pattern="([0-9]{10})" required>
               </div>
               <div class="input-box">
                 <span class="details">CURP</span>
-                <input type="text" placeholder="Escribe tu CURP válido" name="CurpForm"  style="text-transform:uppercase;" maxlength="18" minlength="18" pattern="[A-Z0-9]+"
+                <input type="text" placeholder="Escribe tu CURP válido" name="CurpForm"  style=" text-transform:uppercase;" maxlength="18" minlength="18" pattern="[a-zA-Z0-9]+"
                        required>
               </div>
               <div class="input-box">
                 <span class="details">Tipo de diabetes</span>
-                  <select name="DiabetesForm">
+                  <select name="DiabetesForm" required>
                     <option value="">Selecciona tu tipo de diabetes</option>
                     <option value="1">Tipo 1</option>
                     <option value="2">Tipo 2</option>
@@ -132,7 +132,7 @@
               </div>
               
               <div class="input-box">
-                <span class="details">Sexo</span>
+                <span class="details">Sexo</span required>
                   <select name="SexoForm">
                     <option value="">Selecciona tu sexo</option>
                     <option value="1">Femenino</option>
