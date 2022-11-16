@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
-    <link rel="stylesheet" href="../css/inicioSesionDoctor.css">
+    <link rel="stylesheet" href="../css/inicioSesionPaciente.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -105,19 +105,14 @@
               <div class="textillo">
                 Glucky pacientes
               </div>
-                <form method="post">
+                <form method="post" action="../jsp/inicioSesionPacientes.jsp">
                   <div class="txt_field">
-                    <input type="text" style="text-transform:uppercase;" maxlength="18" minlength="18" pattern="[A-Z0-9]+" placeholder="                         Ejemplo: SASO750909HDFNNS05" required >
+                    <input type="text" style="text-transform:uppercase;" maxlength="18" minlength="18" name="CurpForm" pattern="[a-zA-Z0-9]+" placeholder="                         Ejemplo: SASO750909HDFNNS05" required >
                     <span></span>
                     <label>CURP</label>
                   </div>
                   <div class="txt_field">
-                    <input type="email" placeholder="                         Ejemplo@ejemplo.com" required>
-                    <span></span>
-                    <label>E-mail</label>
-                  </div>
-                  <div class="txt_field">
-                    <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="30" minlength="20" placeholder="                         Escribe la contraseña. Ejemplo: ehdfEHDF12345*?'\!" required>
+                    <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="30" name="PassForm" placeholder="                         EJEMPLO: ehdfEHDF12345*?'\!" required>
                     <span></span>
                     <label>Contraseña</label>
                   </div>
@@ -126,7 +121,7 @@
                    <input type="submit" value="Iniciar sesión" class="button">
 
                   <div class="signup_link">
-                    ¿No te has registrado? <a href="#">Registrate como Paciente</a>
+                    ¿No te has registrado? <a href="../html/RegistroPacientes.html">Registrate como Paciente</a>
                   </div>
                 </form>
             </div>
