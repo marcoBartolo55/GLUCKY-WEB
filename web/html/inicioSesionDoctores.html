@@ -92,19 +92,14 @@
               <div class="textillo">
                 Glucky doctores
               </div>
-                <form method="post">
+                <form method="post" action="../jsp/inicioSesionDoctor.jsp">
                   <div class="txt_field">
-                    <input type="text" maxlength="8" minlength="8" placeholder="                                       Ejemplo: 12345678" pattern="[0-9]{8}" required>
+                      <input type="text" maxlength="8" minlength="8" placeholder="Ejemplo:12345678" name="CedulaForm" pattern="[0-9]{8}" required>
                     <span></span>
                     <label>Cédula profesional</label>
                   </div>
                   <div class="txt_field">
-                    <input type="email" placeholder="                                       Ejemplo@ejemplo.com" required>
-                    <span></span>
-                    <label>E-mail</label>
-                  </div>
-                  <div class="txt_field">
-                    <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="30" minlength="20" placeholder="                                       Escribe la contraseña. Ejemplo: ehdfEHDF12345*?'\!" required>
+                      <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="PassForm" maxlength="30" placeholder="Ejemplo: ehdfEHDF12345*?'\!" required>
                     <span></span>
                     <label>Contraseña</label>
                   </div>
@@ -113,13 +108,11 @@
                    <input type="submit" value="Iniciar sesión" class="button">
 
                   <div class="signup_link">
-                    ¿No te has registrado? <a href="#">Registrate como doctor</a>
+                    ¿No te has registrado? <a href="../html/RegistroDoctores.html">Registrate como doctor</a>
                   </div>
                 </form>
               </div>
-             
-
-
+        
         </div>
     </div>
 
@@ -150,4 +143,4 @@
   }
   </script>
 </body>
-</html>            
+</html>
