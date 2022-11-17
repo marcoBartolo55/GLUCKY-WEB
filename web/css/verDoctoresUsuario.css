@@ -430,3 +430,85 @@ input[type="Submit"] {
 a:link, a:visited, a:active {
       text-decoration:none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mi código de los estos cosos de los forms invisibles*/
+
+
+
+input[type="Submit"].forminvibuDOS {
+  color:#000000;
+  background-color: #001aff00;
+  height: auto;
+  width: 100%;
+  transform: translateY(-40px);
+  height: auto;
+  border: none;
+  
+  
+  text-align: right;
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+  font-weight: bold;
+  
+  text-align: right;
+  font-size: small;
+  padding-right: 15px;
+  text-decoration:none;
+  }
+  
+  input[type="Submit"].forminvibuDOS:hover {
+  
+  
+  background-color: #5fc15200;
+  
+  border: none;
+  
+  }
+  
+  
+  input[type="text"].forminvitexDOS {
+    overflow: hidden;
+    border: none;
+    color:#000000;
+    background-color: #ffffff00;
+    display: grid;
+    position:absolute;
+    transform: translateY(-1000000px);
+    border: none;
+  
+  }
+  
+  .sidebar li a{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: #ffffff;
+    color: #000000;
+  }
+  
+  
+  .sidebar li{
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+    height: 50px;
+  }
