@@ -4,74 +4,134 @@
   <head>
     <meta charset="UTF-8">
     <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
-    <link rel="stylesheet" href="../css/verPacientesDoctor.css">
+    <link rel="stylesheet" href="verPacientesDoctor.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
-<body>
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo_name">Glucky</div>
-        <i class='bx bx-menu' id="btn" ></i>
-    </div>
-    <ul class="nav-list">
-      <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Buscar...">
-         <span class="tooltip">Buscar en la página</span>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Panel de control</span>
-        </a>
-         <span class="tooltip">Centro de información</span>
-      </li>
-      <li>
-       <a href="#">
-         <i class='bx bx-user' ></i>
-         <span class="links_name">Pacientes</span>
-       </a>
-       <span class="tooltip">Buscar pacientes</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-chat' ></i>
-         <span class="links_name">Chateo con pacientes</span>
-       </a>
-       <span class="tooltip">Chatear con pacientes</span>
-     </li>
-   
-     <li>
-       <a href="#">
-         <i class='bx bx-circle' ></i>
-         <span class="links_name">Peticiones</span>
-       </a>
-       <span class="tooltip">Ver peticiones</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-book-bookmark' ></i>
-         <span class="links_name">Citas</span>
-       </a>
-       <span class="tooltip">Ver mi agenda de citas</span>
-     </li>
-     
-    
-     <li class="profile">
-         <div class="profile-details">
-           <!--<img src="profile.jpg" alt="profileImg">-->
-           <div class="name_job">
-             <div class="name">Nombre usuario</div>
-             <div class="job">Doctor</div>
-           </div>
-         </div>
-         <i class='bx bx-log-out' id="log_out" ></i>
-     </li>
-    </ul>
-  </div>
+   <body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxl-c-plus-plus icon'></i>
+            <div class="logo_name">Glucky</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+              <i class='bx bx-search' ></i>
+             <input type="text" placeholder="Buscar...">
+             <span class="tooltip">Buscar en la página</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Panel de control</span>
+            </a>
+            <!-- Inicio del form-->
+
+            <form action="#" class="forminvi">
+                    
+              <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
+            
+            
+              <input type="submit" value="Enviarcurp" class="forminvibu">
+              
+            </form> 
+
+  <!-- Final del form-->
+             <span class="tooltip">Centro de información</span>
+          </li>
+          <li>
+           <a href="#">
+             <i class='bx bx-user' ></i>
+             <span class="links_name">Pacientes</span>
+           </a>
+           <!-- Inicio del form-->
+
+           <form action="#" class="forminvi">
+                    
+            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
+          
+          
+            <input type="submit" value="Enviarcurp" class="forminvibu">
+            
+          </form> 
+
+<!-- Final del form-->
+           <span class="tooltip">Buscar pacientes</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-chat' ></i>
+             <span class="links_name">Chateo con pacientes</span>
+           </a>
+           <!-- Inicio del form-->
+
+           <form action="#" class="forminvi">
+                    
+            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
+          
+          
+            <input type="submit" value="Enviarcurp" class="forminvibu">
+            
+          </form> 
+
+<!-- Final del form-->
+           <span class="tooltip">Chatear con pacientes</span>
+         </li>
+       
+         <li>
+           <a href="#">
+             <i class='bx bx-circle' ></i>
+             <span class="links_name">Peticiones</span>
+           </a>
+           <!-- Inicio del form-->
+
+           <form action="#" class="forminvi">
+                    
+            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
+          
+          
+            <input type="submit" value="Enviarcurp" class="forminvibu">
+            
+          </form> 
+
+<!-- Final del form-->
+           <span class="tooltip">Ver peticiones</span>
+         </li>
+         <li>
+           <a href="#">
+             <i class='bx bx-book-bookmark' ></i>
+             <span class="links_name">Citas</span>
+           </a>
+           <!-- Inicio del form-->
+
+           <form action="#" class="forminvi">
+                    
+            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
+          
+          
+            <input type="submit" value="Enviarcurp" class="forminvibu">
+            
+          </form> 
+
+<!-- Final del form-->
+           <span class="tooltip">Ver mi agenda de citas</span>
+         </li>
+         
+        
+         <li class="profile">
+             <div class="profile-details">
+               <!--<img src="profile.jpg" alt="profileImg">-->
+               <div class="name_job">
+                 <div class="name">Nombre usuario</div>
+                 <div class="job">Doctor</div>
+               </div>
+             </div>
+             <i class='bx bx-log-out' id="log_out" ></i>
+         </li>
+        </ul>
+      </div>
   <section class="home-section">
     <div class="text">
       
@@ -109,7 +169,9 @@
         </div> 
         <div class=cuadradoblancodos>
             <form action="#" class="formu">
-            <input type="submit" value="Aceptar">
+              <input type="text" id="CURP" name="CURP" value="#" class="forminvitexDOS" disabled  ><br>
+
+            <input type="submit" value="Aceptar" class="formi">
             </form>
 
         <br>
@@ -117,7 +179,10 @@
         <div> ㅤㅤㅤㅤ </div>
 
             <form action="#" class="formu3">
-            <input type="submit" value="X">
+              <input type="text" id="CURP" name="CURP" value="#" class="forminvitexDOS" disabled  ><br>
+
+
+            <input type="submit" value="X" class="formi">
             </form>
         </div> 
     <!-- Aquí cierra un div entero de contenido de doctor -->
