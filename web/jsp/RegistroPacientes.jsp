@@ -1,6 +1,5 @@
 <%@page import="Clases.Pacientes"%>
 <%!Pacientes pa;
-String curp;
 int Tipodia,Sexo;%>
 <%
 pa=new Pacientes();
