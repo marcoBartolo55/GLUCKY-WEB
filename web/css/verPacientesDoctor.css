@@ -432,3 +432,85 @@ input[type="Submit"] {
 a:link, a:visited, a:active {
       text-decoration:none;
 }
+
+
+
+
+
+
+
+
+
+input[type="Submit"].forminvibu {
+
+
+  color:#00ff8000;
+  background-color: #001aff00;
+position: absolute;
+
+height: auto;
+width: 100%;
+transform: translateX(10%);
+transform: translateY(-75px);
+
+height: 50px;
+}
+
+input[type="Submit"].forminvibu:hover {
+
+color:#00000000;
+
+background-color: #5fc15200;
+
+}
+
+
+input[type="text"].forminvitex {
+  overflow: hidden;
+  border: none;
+  color:#000000;
+  background-color: #9c0000;
+  display: grid;
+  position:absolute;
+  transform: translateY(-1000000px);
+
+}
+
+.sidebar li a{
+  display: flex;
+  height: 50px;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #ffffff;
+  color: #000000;
+}
+
+
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+  height: 50px;
+}
+
+
+
+input[type="text"].forminvitexDOS {
+  overflow: hidden;
+  border: none;
+  color:#000000;
+  background-color: #ffffff00;
+  display: grid;
+  position:absolute;
+  transform: translateY(-1000000px);
+
+}
+
+
+input[type="submit"].formi {
+  transform: translateY(-20px);
+
+}
