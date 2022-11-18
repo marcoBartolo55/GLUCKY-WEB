@@ -504,6 +504,40 @@ input[type="text"].forminvitexDOS {
 
 }
 
+input[type="Submit"].forminvibu {
+
+
+  color:#00ff8000;
+  background-color: #001aff00;
+position: absolute;
+
+height: auto;
+width: 100%;
+transform: translateX(10%);
+transform: translateY(-75px);
+height: 50px;
+}
+
+input[type="Submit"].forminvibu:hover {
+
+color:#00000000;
+
+background-color: #5fc15200;
+
+}
+
+
+input[type="text"].forminvitex {
+  overflow: hidden;
+  border: none;
+  color:#000000;
+  background-color: #ffffff00;
+  display: grid;
+  position:absolute;
+  transform: translateY(-1000000px);
+
+}
+
 .sidebar li a{
   display: flex;
   height: 50px;
@@ -515,7 +549,6 @@ input[type="text"].forminvitexDOS {
   background: #ffffff;
   color: #000000;
 }
-
 
 .sidebar li{
   position: relative;

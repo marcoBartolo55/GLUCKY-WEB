@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
+
 .sidebar{
   position: fixed;
   left: 0;
@@ -72,7 +73,9 @@
   position: relative;
   margin: 8px 0;
   list-style: none;
+  height: 50px;
 }
+
 .sidebar li .tooltip{
   position: absolute;
   top: -20px;
@@ -132,9 +135,10 @@
 .sidebar .bx-search:hover{
   color: #000000;
 }
+
 .sidebar li a{
   display: flex;
-  height: 100%;
+  height: 50px;
   width: 100%;
   border-radius: 12px;
   align-items: center;
@@ -143,6 +147,7 @@
   background: #ffffff;
   color: #000000;
 }
+
 .sidebar li a:hover{
   background: #FFF;
 }
@@ -435,17 +440,38 @@ div.nombredoc{
     font-weight: bolder;
 }
     
+input[type="Submit"].forminvibu {
 
 
-input[type="Submit"] {
-      overflow: hidden;
-      border: none;
-      color:#000000;
-      font-weight: 500;
-      font-size: 20px;
-      border-bottom-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-      width: 30px;
+  color:#00ff8000;
+  background-color: #001aff00;
+position: absolute;
+
+height: auto;
+width: 100%;
+transform: translateX(10%);
+transform: translateY(-75px);
+height: 50px;
+}
+
+input[type="Submit"].forminvibu:hover {
+
+color:#00000000;
+
+background-color: #5fc15200;
+
+}
+
+
+input[type="text"].forminvitex {
+  overflow: hidden;
+  border: none;
+  color:#000000;
+  background-color: #ffffff00;
+  display: grid;
+  position:absolute;
+  transform: translateY(-1000000px);
+
 }
 
 a:link, a:visited, a:active {

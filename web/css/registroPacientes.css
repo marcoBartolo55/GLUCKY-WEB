@@ -72,6 +72,7 @@
   position: relative;
   margin: 8px 0;
   list-style: none;
+  height: 50px;
 }
 .sidebar li .tooltip{
   position: absolute;
@@ -112,6 +113,41 @@
   transition: all 0.5s ease;
   background: #cddde7;
 }
+
+input[type="Submit"].forminvibu {
+
+
+  color:#00ff8000;
+  background-color: #001aff00;
+position: absolute;
+
+height: auto;
+width: 100%;
+transform: translateX(10%);
+transform: translateY(-75px);
+height: 50px;
+}
+
+input[type="Submit"].forminvibu:hover {
+
+color:#00000000;
+
+background-color: #5fc15200;
+
+}
+
+
+input[type="text"].forminvitex {
+  overflow: hidden;
+  border: none;
+  color:#000000;
+  background-color: #ffffff00;
+  display: grid;
+  position:absolute;
+  transform: translateY(-1000000px);
+
+}
+
 .sidebar.open input{
   padding: 0 20px 0 50px;
   width: 100%;
@@ -134,7 +170,7 @@
 }
 .sidebar li a{
   display: flex;
-  height: 100%;
+  height: 50px;
   width: 100%;
   border-radius: 12px;
   align-items: center;
@@ -430,7 +466,7 @@
   color: #ffffff;
   padding: 8px 16px;
   border: 1px solid transparent;
-  border-color: transparent transparent rgba(247, 5, 5, 0.808)1) transparent;
+  border-color: transparent transparent rgba((247, 5, 5, 0.808)1) transparent;
   cursor: pointer;
 }
 
