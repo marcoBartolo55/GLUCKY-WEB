@@ -1,0 +1,410 @@
+body{
+    background-color: whitesmoke;
+}
+
+.navbar{
+    display: grid;
+    width: auto;
+    grid-template-columns: 50% 50%;
+}
+
+.logo{
+    width: 100%;
+    height: auto;
+}
+
+.logito{
+    width: 5%;
+}
+
+.enlaces{
+    width: 100%;
+    justify-self: end;
+    align-self: center;
+}
+
+.get-app{
+    width: 20%;
+    height: auto;
+    font-size: 1.5vw;
+    color: black;
+    background-color: whitesmoke;
+    border: none;
+}
+
+.get-app:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.info{
+    display: grid;
+    grid-auto-columns: 50%;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    height: 10%;
+    background-image: linear-gradient(to bottom left, rgb(31, 199, 70), rgb(31, 168, 102), rgb(49, 74, 156))
+}
+
+.text{
+    padding: 1em;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5vw;
+    color: whitesmoke;
+}
+
+.imagen{
+    padding: 1em;
+    text-align: center;
+}
+
+.telefono{
+    width: 40%;
+}
+
+.but-pacientes{
+    height: auto;
+    width: auto;
+    padding: 1em;
+    border-radius:0%, 15%, 15%, 0%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+}
+
+.info-pacientes-doctores{
+    color: black;
+    background-color: whitesmoke;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5vw;
+    padding: 1em;
+}
+
+.pc1{
+    width: 60%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(234, 66, 5);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.pc2{
+    width: 60%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(133, 207, 22);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.pc3{
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(17, 171, 222);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.pc4{
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(177, 90, 217);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.pc5{
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(235, 173, 15);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.pc6{
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(9, 155, 9);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.pc7{
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(17, 160, 17);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.pc8{
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    background-color: brown;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.botones1{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: auto;
+    padding: 1em;
+    color: white;
+}
+
+.botones2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: auto;
+    padding: 1em;
+    background-color: cornflowerblue;
+}
+
+.signin{
+    width: 60%;
+    height: auto;
+    border-radius: 3em 0 0 3em;
+    justify-self: end;
+}
+
+.s-pac{
+    width: 100%;
+    border-radius: 3em 0 0 3em;
+    font-size: 2vw;
+    background-color: #3169d9;
+    color: black;
+    font-weight: bold;
+    padding: 1em;
+    border: none;
+}
+
+.s-pac:hover{
+    background-color: white;
+    color: black;
+    transition-duration: 0.4s;
+    font-weight: bold;
+}
+
+.s-doc{
+    width: 100%;
+    border-radius: 3em 0 0 3em;
+    font-size: 2vw;
+    background-color: #3169d9;
+    color: black;
+    font-weight: bold;
+    padding: 1em;
+    border: none;
+}
+
+.s-doc:hover{
+    background-color: white;
+    color: black;
+    transition-duration: 0.4s;
+    font-weight: bold;
+}
+
+.login{
+    width: 60%;
+    height: auto;
+    justify-self: start;
+}
+
+.l-pac{
+    width: 100%;
+    border-radius: 0 3em 3em 0;
+    font-size: 2vw;
+    font-weight: bold;
+    background-color: rgb(15, 202, 15);
+    color: black;
+    padding: 1em;
+    border: none;
+}
+
+.l-pac:hover{
+    background-color: white;
+    color: black;
+    transition-duration: 0.4s;
+    font-weight: bold;
+}
+
+.l-doc{
+    width: 100%;
+    border-radius: 0 3em 3em 0;
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 1em;
+    background-color: rgb(25, 25, 161);
+    color: black;
+    border: none;
+    }
+
+.l-doc:hover{
+    background-color: white;
+    color: black;
+    transition-duration: 0.4s;
+    font-weight: bold;
+}
+
+.but-doctores{
+    height: auto;
+    width: auto;
+    background-color: cornflowerblue;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 45% 45%;
+    justify-items: center;
+    
+}
+
+.dc1{
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    background-color: brown;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.dc2{
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(253, 219, 0);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.dc3{
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(151, 165, 42);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.dc4{
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(228, 75, 19);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.dc5{
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(134, 42, 165);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.dc6{
+    width: 60%;
+    height: 90%;
+    text-align: center;
+    background-color: rgb(19, 102, 247);
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1vw;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em;
+    border-radius: 0 0 3em 3em;
+}
+
+.section{
+    max-width: 100%;
+    max-height: 300px;
+    background-color: rgb(40, 77, 133);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2vw;
+}    
+
+.no-signe{
+    list-style-type: none;
+}
+
+.foot:link{
+    text-decoration: none;
+}
+
+.foot:visited {
+    color: white;
+    text-decoration: none;  
+}
+
+.foot:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.footer:active{
+    color:white
+}
