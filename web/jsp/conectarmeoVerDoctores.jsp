@@ -33,9 +33,25 @@
       </li>
       <li>
         <a href="#">
+             
+ 
           <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Panel de control</span>
+          <span class="links_name">Panel</span>
+
+          
         </a>
+          <!-- Inicio del form-->
+
+          <form action="#" class="forminvi">
+                    
+            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+  
+  
+            <input type="submit" value="Enviarcurp" class="forminvibu">
+    
+            </form> 
+  
+          <!-- Final del form-->
          <span class="tooltip">Centro de información</span>
       </li>
       <li>
@@ -43,6 +59,20 @@
          <i class='bx bx-user' ></i>
          <span class="links_name">Doctores</span>
        </a>
+       
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+
+        </form> 
+
+      <!-- Final del form-->
+
        <span class="tooltip">Buscar doctores</span>
      </li>
      <li>
@@ -50,6 +80,20 @@
          <i class='bx bx-chat' ></i>
          <span class="links_name">Chateo con doctor</span>
        </a>
+       
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+
+        </form> 
+
+      <!-- Final del form-->
+
        <span class="tooltip">Mensajes de mi doctor</span>
      </li>
      <li>
@@ -57,6 +101,20 @@
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Niveles</span>
        </a>
+       
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+
+        </form> 
+
+      <!-- Final del form-->
+
        <span class="tooltip">Estado</span>
      </li>
      <li>
@@ -64,6 +122,20 @@
          <i class='bx bx-food-menu' ></i>
          <span class="links_name">Dietas</span>
        </a>
+       
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+
+        </form> 
+
+      <!-- Final del form-->
+
        <span class="tooltip">Ver dietas</span>
      </li>
      <li>
@@ -71,6 +143,20 @@
          <i class='bx bx-book-bookmark' ></i>
          <span class="links_name">Citas</span>
        </a>
+      
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+
+        </form> 
+
+      <!-- Final del form-->
+
        <span class="tooltip">Ver mi agenda de citas</span>
      </li>
      <li>
@@ -78,6 +164,20 @@
          <i class='bx bx-heart' ></i>
          <span class="links_name">Tratamientos</span>
        </a>
+       
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+
+        </form> 
+
+      <!-- Final del form-->
+      
        <span class="tooltip">Ver mis tratamientos</span>
      </li>
     
@@ -86,20 +186,36 @@
            <!--<img src="profile.jpg" alt="profileImg">-->
            <div class="name_job">
              <div class="name">Nombre usuario</div>
-             <div class="job">Paciente</div>
+             <div class="job">
+                 
+                   <%
+     
+           System.out.println("Nombre usuario");
+          %>
+                 
+                 
+             </div>
            </div>
          </div>
          <i class='bx bx-log-out' id="log_out" ></i>
      </li>
     </ul>
   </div>
+
   <section class="home-section">
     <div class="text">
       
     </div>
    
   <div class="container">
-      <div class="title">Buenos dias usuario</div>
+      <div class="title">Buenos dias
+      
+      
+               <%
+     
+           System.out.println("Nombre del paciente");
+          %>
+      </div>
       <div class="content">
 
         <br>
@@ -118,7 +234,18 @@
               <div class="imagen"></div>
               </div>
               <div class="vercosos">
-                  <a href="">Siguiente></a> 
+                    <!-- Inician los forms-->
+
+                    <form action="#" class="forminvi">
+                    
+                      <input type="text" id="CURP" name="CURP" value="#" class="forminvitexDOS" disabled  ><br>
+                    
+                    
+                      <input type="submit" value="Siguiente" class="forminvibuDOS">
+                      
+                    </form>
+                    
+                      <!-- Terminan los forms-->
               </div>
             </div>
             <div class="column">
@@ -127,7 +254,18 @@
               <div class="imagen"></div>
               </div>
               <div class="vercosos">
-                <a href="">Contactarse></a> 
+                  <!-- Inician los forms-->
+
+                  <form action="#" class="forminviDOS">
+                    
+                    <input type="text" id="CURP" name="CURP" value="#" class="forminvitexDOS" disabled  ><br>
+                  
+                  
+                    <input type="submit" value="Contactarse" class="forminvibuDOS">
+                    
+                  </form>
+                  
+                    <!-- Terminan los forms-->
             </div>
               <br>
             </div>
@@ -137,7 +275,19 @@
               <div class="imagen"></div>
               </div>
               <div class="vercosos">
-                <a href="#">  Ver todos los doctores></a>
+                        <!-- Inician los forms-->
+
+                 <form action="#" class="forminvi">
+                    
+                  <input type="text" id="CURP" name="CURP" value="#" class="forminvitexDOS" disabled  ><br>
+                
+                
+                  <input type="submit" value="Ver todos los doctores" class="forminvibuDOS">
+                  
+                </form>
+                
+                  <!-- Terminan los forms-->
+  
             </div>
               <br>
             </div>

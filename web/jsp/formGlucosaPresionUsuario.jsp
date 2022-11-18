@@ -36,6 +36,20 @@
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Panel de control</span>
         </a>
+
+        <!-- Inicio del form-->
+
+          <form action="#" class="forminvi">
+                    
+          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+          <input type="submit" value="Enviarcurp" class="forminvibu">
+  
+          </form> 
+
+          <!-- Final del form-->
+
          <span class="tooltip">Centro de información</span>
       </li>
       <li>
@@ -43,6 +57,20 @@
          <i class='bx bx-user' ></i>
          <span class="links_name">Doctores</span>
        </a>
+
+       <!-- Inicio del form-->
+
+          <form action="#" class="forminvi">
+                    
+          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+          <input type="submit" value="Enviarcurp" class="forminvibu">
+  
+          </form> 
+
+          <!-- Final del form-->
+
        <span class="tooltip">Buscar doctores</span>
      </li>
      <li>
@@ -50,6 +78,20 @@
          <i class='bx bx-chat' ></i>
          <span class="links_name">Chateo con doctor</span>
        </a>
+
+       <!-- Inicio del form-->
+
+          <form action="#" class="forminvi">
+                    
+          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+          <input type="submit" value="Enviarcurp" class="forminvibu">
+  
+          </form> 
+
+          <!-- Final del form-->
+
        <span class="tooltip">Mensajes de mi doctor</span>
      </li>
      <li>
@@ -57,6 +99,20 @@
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Niveles</span>
        </a>
+
+       <!-- Inicio del form-->
+
+          <form action="#" class="forminvi">
+                    
+          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+          <input type="submit" value="Enviarcurp" class="forminvibu">
+  
+          </form> 
+
+          <!-- Final del form-->
+
        <span class="tooltip">Estado</span>
      </li>
      <li>
@@ -64,6 +120,20 @@
          <i class='bx bx-food-menu' ></i>
          <span class="links_name">Dietas</span>
        </a>
+
+       <!-- Inicio del form-->
+
+          <form action="#" class="forminvi">
+                    
+          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+          <input type="submit" value="Enviarcurp" class="forminvibu">
+  
+          </form> 
+
+          <!-- Final del form-->
+
        <span class="tooltip">Ver dietas</span>
      </li>
      <li>
@@ -71,6 +141,20 @@
          <i class='bx bx-book-bookmark' ></i>
          <span class="links_name">Citas</span>
        </a>
+
+       <!-- Inicio del form-->
+
+          <form action="#" class="forminvi">
+                    
+          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+          <input type="submit" value="Enviarcurp" class="forminvibu">
+  
+          </form> 
+
+          <!-- Final del form-->
+
        <span class="tooltip">Ver mi agenda de citas</span>
      </li>
      <li>
@@ -78,6 +162,20 @@
          <i class='bx bx-heart' ></i>
          <span class="links_name">Tratamientos</span>
        </a>
+
+       <!-- Inicio del form-->
+
+          <form action="#" class="forminvi">
+                    
+          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+          <input type="submit" value="Enviarcurp" class="forminvibu">
+  
+          </form> 
+
+          <!-- Final del form-->
+          
        <span class="tooltip">Ver mis tratamientos</span>
      </li>
     

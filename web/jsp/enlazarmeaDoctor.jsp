@@ -36,6 +36,20 @@
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Panel de control</span>
         </a>
+
+        <!-- Inicio del form-->
+
+        <form action="#" class="forminvi">
+                    
+          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+          <input type="submit" value="Enviarcurp" class="forminvibu">
+  
+          </form> 
+
+          <!-- Final del form-->
+
          <span class="tooltip">Centro de información</span>
       </li>
       <li>
@@ -43,6 +57,20 @@
          <i class='bx bx-user' ></i>
          <span class="links_name">Doctores</span>
        </a>
+
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+
+        </form> 
+
+        <!-- Final del form-->
+
        <span class="tooltip">Buscar doctores</span>
      </li>
      <li>
@@ -50,6 +78,20 @@
          <i class='bx bx-chat' ></i>
          <span class="links_name">Chateo con doctor</span>
        </a>
+
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+
+        </form> 
+
+        <!-- Final del form-->
+
        <span class="tooltip">Mensajes de mi doctor</span>
      </li>
      <li>
@@ -57,6 +99,20 @@
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Niveles</span>
        </a>
+
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+
+        </form> 
+
+        <!-- Final del form-->
+
        <span class="tooltip">Estado</span>
      </li>
      <li>
@@ -64,6 +120,20 @@
          <i class='bx bx-food-menu' ></i>
          <span class="links_name">Dietas</span>
        </a>
+
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+
+        </form> 
+
+        <!-- Final del form-->
+
        <span class="tooltip">Ver dietas</span>
      </li>
      <li>
@@ -71,6 +141,20 @@
          <i class='bx bx-book-bookmark' ></i>
          <span class="links_name">Citas</span>
        </a>
+
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+
+        </form> 
+
+        <!-- Final del form-->
+
        <span class="tooltip">Ver mi agenda de citas</span>
      </li>
      <li>
@@ -78,6 +162,20 @@
          <i class='bx bx-heart' ></i>
          <span class="links_name">Tratamientos</span>
        </a>
+
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+
+
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+
+        </form> 
+
+        <!-- Final del form-->
+        
        <span class="tooltip">Ver mis tratamientos</span>
      </li>
     
@@ -85,7 +183,14 @@
          <div class="profile-details">
            <!--<img src="profile.jpg" alt="profileImg">-->
            <div class="name_job">
-             <div class="name">Curp Usuario VAFE050315HMCRGNA6</div>
+               <div class="name">
+                   
+                   
+                        <%
+     
+           System.out.println("Nombre del paciente");
+          %>
+               </div>
              <div class="job">Paciente</div>
            </div>
          </div>
@@ -99,12 +204,19 @@
     </div>
    
   <div class="container">
-      <div class="title">Buenos dias usuario</div>
+      <div class="title">Buenos dias 
+      
+      
+           <%
+     
+           System.out.println("Nombre del paciente");
+          %>
+      </div>
       <div class="content">
 
         <br>
         <div class=textoarriba>
-          Tu endocrinologo profesional sanitario EPS puede conectarse a tu cuenta de Glucky y realizar seguimientos de tu diabetes en remoto.
+          Tu endocrinologo profesional sanitario EPS puede conectarse a tu cuenta de Glucky y realizar seguimiento s etu diabetes en remoto.
           Para ello el EPS debe registrarse primero en Glucky
           <br>
         </div> 
@@ -117,18 +229,26 @@
                 <!-- Aquí va el form  -->
                 <div class="center">
                     <div class="textillo">
-                      Nombre del paciente
+                           <%
+     
+           System.out.println("Nombre del paciente");
+          %>
                     </div>
                     <br>
                         <div class=textoarribadosform>
-                            Para unirte debes de escribir la cédula de tu EPS
+                            Para unirte debes de escribir la cédula y código de tu EPS
                             <br>
                         </div> 
                       <form method="post">
                         <div class="txt_field">
-                          <input type="text" maxlength="8" minlength="8" placeholder="                                       Ejemplo: 12345678" pattern="[0-9]{8}" required>
+                          <input type="text" required>
                           <span></span>
                           <label>Cédula</label>
+                        </div>
+                        <div class="txt_field">
+                          <input type="text" required>
+                          <span></span>
+                          <label>Código doctor</label>
                         </div>
                         <div class="pass">Información de Glucky...</div>
       
@@ -153,7 +273,7 @@
           <div class="texto">
         
            
-            Mi endocrinologo profesional sanitario ya es usuario de Glucky...
+            Mi endocrinologo profesinal sanitario ya es usuario de Glucky...
           </div>
 
       </div>

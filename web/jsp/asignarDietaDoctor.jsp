@@ -6,7 +6,6 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!DOCTYPE html>
 
 <html lang="en" dir="ltr">
 
@@ -42,6 +41,20 @@
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Panel de control</span>
         </a>
+
+        <!-- Inicio del form-->
+
+        <form action="#" class="forminvi">
+                    
+          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+        
+        
+          <input type="submit" value="Enviarcurp" class="forminvibu">
+          
+        </form> 
+
+        <!-- Final del form-->
+
          <span class="tooltip">Centro de información</span>
       </li>
       <li>
@@ -49,6 +62,20 @@
          <i class='bx bx-user' ></i>
          <span class="links_name">Pacientes</span>
        </a>
+
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+      
+      
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+        
+      </form> 
+
+      <!-- Final del form-->
+
        <span class="tooltip">Buscar pacientes</span>
      </li>
      <li>
@@ -56,6 +83,20 @@
          <i class='bx bx-chat' ></i>
          <span class="links_name">Chateo con pacientes</span>
        </a>
+
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+      
+      
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+        
+      </form> 
+
+      <!-- Final del form-->
+
        <span class="tooltip">Chatear con pacientes</span>
      </li>
    
@@ -64,6 +105,20 @@
          <i class='bx bx-circle' ></i>
          <span class="links_name">Peticiones</span>
        </a>
+
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+      
+      
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+        
+      </form> 
+
+      <!-- Final del form-->
+
        <span class="tooltip">Ver peticiones</span>
      </li>
      <li>
@@ -71,6 +126,20 @@
          <i class='bx bx-book-bookmark' ></i>
          <span class="links_name">Citas</span>
        </a>
+
+       <!-- Inicio del form-->
+
+       <form action="#" class="forminvi">
+                    
+        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+      
+      
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+        
+      </form> 
+
+      <!-- Final del form-->
+      
        <span class="tooltip">Ver mi agenda de citas</span>
      </li>
      
