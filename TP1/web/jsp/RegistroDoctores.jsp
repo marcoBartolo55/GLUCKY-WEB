@@ -44,9 +44,9 @@ if(si==true){
 <!-- HTML !-->
 
 <div class="ahche">Registro completado</div>
-<form action="../index.html" method="post">
+<form action="../index.html">
     
-    <input type="text" name="CURP" value="" class="forminvitex"><br>
+    <input type="text" class="forminvitex"><br>
             
     <input type="submit" value="Aceptar" class="button-9">
   </form>
@@ -71,9 +71,9 @@ if(si==true){
 <!-- HTML !-->
 
 <div class="ahche">No se pudo completar tu registro debido a que esa Cedula ya fue registrada</div>
-<form action="../index.html" method="post">
+<form action="../html/RegistroDoctores.html">
     
-    <input type="text" name="CURP" value="" class="forminvitex"><br>
+    <input type="text"  class="forminvitex"><br>
             
     <input type="submit" value="Aceptar" class="button-9">
   </form>
