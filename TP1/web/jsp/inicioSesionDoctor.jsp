@@ -1,24 +1,16 @@
 <%@page import="Clases.Doctores" %>
 <%!Doctores doc;
 String Cedula,Pass;
-boolean a;%>
+String si;%>
 <%
 doc= new Doctores();
 Cedula=request.getParameter("CedulaForm");
 Pass=request.getParameter("PassForm");
-a=doc.LoginDoctores(Cedula,Pass);
-System.out.println(a);
-
-if (a== true){
-
-System.out.println(a);
-
+si=doc.LoginDoctores(Cedula,Pass);
+if (si.equals("Excelente")){
+    doc=doc.obtenerD(Cedula);
 %>
-
-
-
-
-<%-- Comentarios acerca de la p·gina que tiene que estar dentro de la cosa de login --%>
+<%-- Comentarios acerca de la p√°gina que tiene que estar dentro de la cosa de login --%>
  <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
@@ -41,39 +33,22 @@ System.out.println(a);
         </div>
         <ul class="nav-list">
           <li>
-              <i class='bx bx-search' ></i>
-             <input type="text" placeholder="Buscar...">
-             <span class="tooltip">Buscar en la p·gina</span>
-          </li>
-          <li>
-            <a href="#">
+            <a>
               <i class='bx bx-grid-alt'></i>
               <span class="links_name">Panel de control</span>
             </a>
-            <!-- Inicio del form-->
-
-            <form action="#" class="forminvi">
-                    
-              <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
-            
-            
-              <input type="submit" value="Enviarcurp" class="forminvibu">
-              
-            </form> 
-
-  <!-- Final del form-->
-             <span class="tooltip">Centro de informaciÛn</span>
+             <span class="tooltip">Centro de informaci√≥n</span>
           </li>
           <li>
-           <a href="#">
+           <a>
              <i class='bx bx-user' ></i>
              <span class="links_name">Pacientes</span>
            </a>
            <!-- Inicio del form-->
 
-           <form action="#" class="forminvi">
+           <form action="#" method="post" class="forminvi">
                     
-            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
+            <input type="text" name="CEDULA" value="<%=Cedula%>" class="forminvitex"><br>
           
           
             <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -84,15 +59,15 @@ System.out.println(a);
            <span class="tooltip">Buscar pacientes</span>
          </li>
          <li>
-           <a href="#">
+           <a>
              <i class='bx bx-chat' ></i>
              <span class="links_name">Chateo con pacientes</span>
            </a>
            <!-- Inicio del form-->
 
-           <form action="#" class="forminvi">
+           <form action="#" method="post" class="forminvi">
                     
-            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
+            <input type="text" name="CEDULA" value="<%=Cedula%>" class="forminvitex"><br>
           
           
             <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -104,7 +79,7 @@ System.out.println(a);
          </li>
        
          <li>
-           <a href="#">
+           <a>
              <i class='bx bx-circle' ></i>
              <span class="links_name">Peticiones</span>
            </a>
@@ -123,15 +98,15 @@ System.out.println(a);
            <span class="tooltip">Ver peticiones</span>
          </li>
          <li>
-           <a href="#">
+           <a>
              <i class='bx bx-book-bookmark' ></i>
              <span class="links_name">Citas</span>
            </a>
            <!-- Inicio del form-->
 
-           <form action="#" class="forminvi">
+           <form action="#" method="post" class="forminvi">
                     
-            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
+            <input type="text" name="CEDULA" value="<%=Cedula%>" class="forminvitex"><br>
           
           
             <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -147,7 +122,7 @@ System.out.println(a);
              <div class="profile-details">
                <!--<img src="profile.jpg" alt="profileImg">-->
                <div class="name_job">
-                 <div class="name">Nombre usuario</div>
+                   <div class="name">Nombre: <br> <%=doc.getNombre()%></div>
                  <div class="job">Doctor</div>
                </div>
              </div>
@@ -164,13 +139,7 @@ System.out.println(a);
     </div>
    
   <div class="container">
-      <div class="title">Buenos dias 
-          <%
-             //////Nombre del doctor
-             System.out.println("Nombre del doctor");
-
-          %> 
-      
+      <div class="title">Buenos dias: <%=doc.getNombre()%> <%=doc.getApellidos()%>
       </div>
       <div class="content">
 
@@ -181,30 +150,30 @@ System.out.println(a);
          <!--  <br>-->
          <!--</div> -->
       
-         <!--  AquÌ va el contenido de todo lo que quieran poner -->
+         <!--  Aqu√≠ va el contenido de todo lo que quieran poner -->
         
           <div class="row">
             <div class="column">
-              <!-- AquÌ va el contenido de todo lo que quieran poner -->
+              <!-- Aqu√≠ va el contenido de todo lo que quieran poner -->
 
 
               <div class="rowdos">
                 <div class="columntercera" >
                     
-                    <!--   aquÌ va cada uno de los cuadrados que colocaremos  -->
+                    <!--   aqu√≠ va cada uno de los cuadrados que colocaremos  -->
                     <div class="cuadradodatos">
                         
-                         <!--   aquÌ va un nuevo div de textos  -->
+                         <!--   aqu√≠ va un nuevo div de textos  -->
                          <div class="nivel">
                     <%
-                    //////Promedio de los niveles de presiÛn de los pacientes
-                    System.out.println("Promedio de presiÛn");
+                    //////Promedio de los niveles de presi√≥n de los pacientes
+                    System.out.println("Promedio de presi√≥n");
 
                     %> 
                          </div>
                     
                          <div class="categoria">
-                            PresiÛn
+                            Presi√≥n
                          </div>  
 
                     </div>
@@ -279,10 +248,10 @@ System.out.println(a);
                 <div class="columntercera" >
                   
 
-                    <!--   aquÌ va cada uno de los cuadrados que colocaremos  -->
+                    <!--   aqu√≠ va cada uno de los cuadrados que colocaremos  -->
                     <div class="cuadradodatosgluco">
                         
-                        <!--   aquÌ va un nuevo div de textos  -->
+                        <!--   aqu√≠ va un nuevo div de textos  -->
                         <div class="nivelgluco">
                     <%
                     //////Promedio de niveles de azucar de los pacientes
@@ -303,15 +272,15 @@ System.out.println(a);
 
                     <div class="cuadradodatosblancostratamientos">
                     <%
-                    //////mÈtodos de agarrar datos de doctores total de citas
-                    System.out.println("N˙mero de citas totales");
+                    //////m√©todos de agarrar datos de doctores total de citas
+                    System.out.println("N√∫mero de citas totales");
 
                     %> 
                      Citas pendientes
                         <div class="niveldetratados">
                     <%
-                    //////mÈtodos de agarrar datos de doctores total de citas
-                    System.out.println("N˙mero de citas totales");
+                    //////m√©todos de agarrar datos de doctores total de citas
+                    System.out.println("N√∫mero de citas totales");
 
                     %> 
                             <div class="ojo">
@@ -324,15 +293,15 @@ System.out.println(a);
 
                     <div class="cuadradodatosblancostratamientos">
                     <%
-                    //////mÈtodos de agarrar datos de pacientes tipo 1
-                    System.out.println("N˙mero de pacientes tipo 1");
+                    //////m√©todos de agarrar datos de pacientes tipo 1
+                    System.out.println("N√∫mero de pacientes tipo 1");
 
                     %> 
                      Paciente tipo 1
                         <div class="niveldetratadosaz">
                     <%
-                    //////mÈtodos de agarrar datos de pacientes tipo 1
-                    System.out.println("N˙mero de pacientes tipo 1");
+                    //////m√©todos de agarrar datos de pacientes tipo 1
+                    System.out.println("N√∫mero de pacientes tipo 1");
 
                     %>
                             <div class="ojo">
@@ -345,14 +314,14 @@ System.out.println(a);
                 </div>
                 <div class="columntercera">
 
-                  <!--   aquÌ va cada uno de los cuadrados que colocaremos  -->
+                  <!--   aqu√≠ va cada uno de los cuadrados que colocaremos  -->
                   <div class="cuadradodatosdos">
                         
-                    <!--   aquÌ va un nuevo div de textos  -->
+                    <!--   aqu√≠ va un nuevo div de textos  -->
                     <div class="niveldos">
                      <%
-                    //////mÈtodos de agarrar datos de doctores (numero de citas)
-                    System.out.println("N˙mero de citas totales");
+                    //////m√©todos de agarrar datos de doctores (numero de citas)
+                    System.out.println("N√∫mero de citas totales");
              
                     %>
                     </div>
@@ -370,15 +339,15 @@ System.out.println(a);
 
                     <div class="cuadradodatosblancostratamientos">
                     <%
-                    //////mÈtodos de agarrar datos de pacientes afiliados al doctor
-                    System.out.println("N˙mero de pacientes tipo 3");
+                    //////m√©todos de agarrar datos de pacientes afiliados al doctor
+                    System.out.println("N√∫mero de pacientes tipo 3");
              
                     %>
                       pacientes tipo 1
                         <div class="niveldetratatres">
                     <%
-                    //////mÈtodos de agarrar datos de pacientes afiliados al doctor
-                    System.out.println("N˙mero de pacientes tipo 3");
+                    //////m√©todos de agarrar datos de pacientes afiliados al doctor
+                    System.out.println("N√∫mero de pacientes tipo 3");
              
                     %>
                             <div class="ojo">
@@ -391,15 +360,15 @@ System.out.println(a);
 
                     <div class="cuadradodatosblancostratamientos">
                     <%
-                    //////mÈtodos de agarrar datos de pacientes afiliados al doctor
-                    System.out.println("N˙mero de pacientes sin tratamientos");
+                    //////m√©todos de agarrar datos de pacientes afiliados al doctor
+                    System.out.println("N√∫mero de pacientes sin tratamientos");
              
                     %>
                       Sin tratamiento
                         <div class="niveldetratatresver">
                     <%
-                    //////mÈtodos de agarrar datos de pacientes afiliados al doctor
-                    System.out.println("N˙mero de pacientes sin tratamientos");
+                    //////m√©todos de agarrar datos de pacientes afiliados al doctor
+                    System.out.println("N√∫mero de pacientes sin tratamientos");
              
                     %>
                            
@@ -414,25 +383,25 @@ System.out.println(a);
               </div>
 
 
-                 <!-- AquÌ va la supuesta grafica  -->
+                 <!-- Aqu√≠ va la supuesta grafica  -->
               <div class="grafica">
 
 
                
               
               </div>
-                <!-- AquÌ va la supuesta grafica  -->
+                <!-- Aqu√≠ va la supuesta grafica  -->
 
             </div>
             <div class="columna2">
-              <!-- AquÌ va el contenido de todo lo que quieran poner -->
+              <!-- Aqu√≠ va el contenido de todo lo que quieran poner -->
                
                 
                 <div class="recuadrogris">
                   
                     
                     <%
-                    //////mÈtodos de agarrar nombre de mi docto
+                    //////m√©todos de agarrar nombre de mi docto
                     System.out.println("Nombre del doctor");
                     %>
                     <br>
@@ -456,7 +425,7 @@ System.out.println(a);
                      out.println("<br>");
                      
 
-                   /// cierre de la condiciÛn
+                   /// cierre de la condici√≥n
                     %>
                     }
                   
@@ -470,7 +439,7 @@ System.out.println(a);
           
                     <div class="cuadradonotideabajo">
           
-                      Recibe notificaciones sobre tus pacientes y prÛximas citas
+                      Recibe notificaciones sobre tus pacientes y pr√≥ximas citas
 
                   </div>
 
@@ -515,23 +484,62 @@ System.out.println(a);
   </script>
 </body>
 </html>
-  
-
-
-
-
-
 <%
-
-    } else{
-System.out.println(a);
-
+}else{
+    if(si.equals("PassIn")){
 %>
+    <!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="../css/botonEmergenteDoct.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
 
+<!-- HTML !-->
 
+<div class="ahche">Contrase√±a incorrecta</div>
+<form action="inicioSesionDoctor2.jsp" method="post">
+    
+    <input type="text" name="CEDULA" value="<%=Cedula%>" class="forminvitex"><br>
+            
+    <input type="submit" value="Aceptar" class="button-9">
+  </form>
+    </body>
+</html>
+<%}else{%>
+    <!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="../css/botonEmergenteDoct.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
 
+<!-- HTML !-->
 
-
+<div class="ahche">Cedula no registrada</div>
+<form action="../html/inicioSesionDoctores.html">
+    
+    <input type="text" class="forminvitex"><br>
+            
+    <input type="submit" value="Aceptar" class="button-9">
+  </form>
+    </body>
+</html>
 <%
+    }
 }
 %>
