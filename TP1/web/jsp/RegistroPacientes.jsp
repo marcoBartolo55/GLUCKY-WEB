@@ -1,6 +1,7 @@
 <%@page import="Clases.Pacientes"%>
 <%!Pacientes pa;
-int Tipodia,Sexo;%>
+int Tipodia,Sexo;
+boolean si;%>
 <%
 pa=new Pacientes();
 pa.setCurp(request.getParameter("CurpForm"));
@@ -33,16 +34,59 @@ else{
         }
     }
 }
-pa.registrarPacientes(pa);
+si=pa.registrarPacientes(pa);
+if(si==true){
 %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title><%System.out.println(Sexo);%>a</title>
-    </head>
-    <body>
-        <h1>putite</h1>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="../css/botonEmergenteDoct.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+<!-- HTML !-->
+
+<div class="ahche">Registro completado</div>
+<form action="../index.html">
+    
+    <input type="text" class="forminvitex"><br>
+            
+    <input type="submit" value="Aceptar" class="button-9">
+  </form>
     </body>
 </html>
+
+<%}else{%>
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
+    <link rel="stylesheet" href="../css/botonEmergenteDoct.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+<!-- HTML !-->
+
+<div class="ahche">No se pudo completar tu registro debido a que esa Curp ya fue registrada</div>
+<form action="../html/RegistroPacientes.html">
+    
+    <input type="text"  class="forminvitex"><br>
+            
+    <input type="submit" value="Aceptar" class="button-9">
+  </form>
+    </body>
+</html>
+<%}%>
