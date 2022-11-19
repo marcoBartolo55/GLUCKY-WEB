@@ -70,7 +70,7 @@ if(si==true){
 
 <!-- HTML !-->
 
-<div class="ahche">No se pudo completar tu registro debido a que esa cedula ya fue registrada</div>
+<div class="ahche">No se pudo completar tu registro debido a que esa Cedula ya fue registrada</div>
 <form action="../index.html" method="post">
     
     <input type="text" name="CURP" value="" class="forminvitex"><br>
