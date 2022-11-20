@@ -1,10 +1,9 @@
-<%!String Curp;%>
+<%@page import="Clases.Pacientes"%>
+<%!String Curp;
+Pacientes pa;%>
 <%Curp = request.getParameter("CURP");
-System.out.println(Curp);%>
-<!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+pa = new Pacientes();
+pa = pa.obtenerPa(Curp);%>
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
@@ -24,26 +23,17 @@ System.out.println(Curp);%>
         <div class="logo_name">Glucky</div>
         <i class='bx bx-menu' id="btn" ></i>
     </div>
-    <ul class="nav-list">
+    <ul class="nav-list">     
       <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Buscar...">
-         <span class="tooltip">Buscar en la p√°gina</span>
-      </li>
-      <li>
-        <a href="#">
-             
- 
+        <a>
           <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Panel</span>
-
-          
+          <span class="links_name">Panel de control</span>
         </a>
           <!-- Inicio del form-->
 
-          <form action="#" class="forminvi">
+          <form action="dashboardPacientes.jsp" method="post" class="forminvi">
                     
-            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+            <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"   ><br>
   
   
             <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -51,40 +41,26 @@ System.out.println(Curp);%>
             </form> 
   
           <!-- Final del form-->
-         <span class="tooltip">Centro de informaci√≥n</span>
+         <span class="tooltip">Centro de informaciÛn</span>
       </li>
       <li>
-       <a href="#">
+       <a>
          <i class='bx bx-user' ></i>
          <span class="links_name">Doctores</span>
        </a>
-       
-       <!-- Inicio del form-->
-
-       <form action="#" class="forminvi">
-                    
-        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
-
-
-        <input type="submit" value="Enviarcurp" class="forminvibu">
-
-        </form> 
-
-      <!-- Final del form-->
-
        <span class="tooltip">Buscar doctores</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-chat' ></i>
          <span class="links_name">Chateo con doctor</span>
        </a>
        
        <!-- Inicio del form-->
 
-       <form action="#" class="forminvi">
+       <form action="#" method="post" class="forminvi">
                     
-        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+        <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
 
 
         <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -96,16 +72,16 @@ System.out.println(Curp);%>
        <span class="tooltip">Mensajes de mi doctor</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Niveles</span>
        </a>
        
        <!-- Inicio del form-->
 
-       <form action="#" class="forminvi">
+       <form action="#" method="post" class="forminvi">
                     
-        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+        <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
 
 
         <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -117,16 +93,16 @@ System.out.println(Curp);%>
        <span class="tooltip">Estado</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-food-menu' ></i>
          <span class="links_name">Dietas</span>
        </a>
        
        <!-- Inicio del form-->
 
-       <form action="#" class="forminvi">
+       <form action="#" method="post" class="forminvi">
                     
-        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+        <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
 
 
         <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -138,16 +114,16 @@ System.out.println(Curp);%>
        <span class="tooltip">Ver dietas</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-book-bookmark' ></i>
          <span class="links_name">Citas</span>
        </a>
       
        <!-- Inicio del form-->
 
-       <form action="#" class="forminvi">
+       <form action="#" method="" class="forminvi">
                     
-        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+        <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
 
 
         <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -159,16 +135,16 @@ System.out.println(Curp);%>
        <span class="tooltip">Ver mi agenda de citas</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-heart' ></i>
          <span class="links_name">Tratamientos</span>
        </a>
        
        <!-- Inicio del form-->
 
-       <form action="#" class="forminvi">
+       <form action="#" method="post" class="forminvi">
                     
-        <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+        <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
 
 
         <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -184,15 +160,8 @@ System.out.println(Curp);%>
          <div class="profile-details">
            <!--<img src="profile.jpg" alt="profileImg">-->
            <div class="name_job">
-             <div class="name">Nombre usuario</div>
-             <div class="job">
-                 
-                   <%
-     
-           out.println(Curp);
-          %>
-                 
-                 
+               <div class="name">Nombre <br><%=pa.getNombre()%></div>
+             <div class="job">        
              </div>
            </div>
          </div>
@@ -207,13 +176,7 @@ System.out.println(Curp);%>
     </div>
    
   <div class="container">
-      <div class="title">Buenos dias 
-      
-         <%
-     
-           System.out.println("Nombre del paciente");
-          %>
-      
+      <div class="title">Buenos dias <%=pa.getNombre()%> <%=pa.getApellidos()%> 
       </div>
       <div class="content">
 
@@ -224,7 +187,7 @@ System.out.println(Curp);%>
           <br>
         </div> 
       
-          <!-- Aqu√≠ va el contenido de todo lo que quieran poner -->
+          <!-- AquÌ va el contenido de todo lo que quieran poner -->
         
           <div class="row">
             <div class="column">
@@ -307,17 +270,14 @@ System.out.println(Curp);%>
   let sidebar = document.querySelector(".sidebar");
   let closeBtn = document.querySelector("#btn");
   let searchBtn = document.querySelector(".bx-search");
-
   closeBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("open");
     menuBtnChange();//calling the function(optional)
   });
-
   searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
     sidebar.classList.toggle("open");
     menuBtnChange(); //calling the function(optional)
   });
-
   // following are the code to change sidebar button(optional)
   function menuBtnChange() {
    if(sidebar.classList.contains("open")){

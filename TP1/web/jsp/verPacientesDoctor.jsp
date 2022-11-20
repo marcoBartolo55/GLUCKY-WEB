@@ -136,11 +136,7 @@ Cedula = request.getParameter("CEDULA");%>
              <div class="profile-details">
                <!--<img src="profile.jpg" alt="profileImg">-->
                <div class="name_job">
-                   <div class="name">
-                       
-                       <%   out.println(Curp); %>
-                       
-                   </div>
+                 <div class="name">Nombre usuario</div>
                  <div class="job">Doctor</div>
                </div>
              </div>
@@ -154,13 +150,7 @@ Cedula = request.getParameter("CEDULA");%>
     </div>
    
   <div class="container">
-      <div class="title">Buenos dias 
-        <%
-     
-           System.out.println("Nombre usuario");
-          %>
-      
-      </div>
+      <div class="title">Buenos dias usuario</div>
       <div class="content">
 
         <br>
@@ -175,6 +165,7 @@ Cedula = request.getParameter("CEDULA");%>
 
     <!-- Aquí abre el div de contenido de un doctor -->
     <%while (rs.next()==true){
+        if(rs.getString("Cedula").equals(Cedula)){
     Curp =rs.getString("Curp");
     System.out.println(Curp);
     rs2=doc.DatopacienteSoli(Curp);
@@ -216,7 +207,8 @@ Cedula = request.getParameter("CEDULA");%>
             <input type="submit" value="X" class="formi">
             </form>
         </div> 
-    <%}%>
+    <%}
+    }%>
     <!-- Aquí cierra un div entero de contenido de doctor -->
         
 

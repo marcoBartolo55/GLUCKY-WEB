@@ -10,7 +10,7 @@ si=doc.LoginDoctores(Cedula,Pass);
 if (si.equals("Excelente")){
     doc=doc.obtenerD(Cedula);
 %>
-<%-- Comentarios acerca de la pÃ¡gina que tiene que estar dentro de la cosa de login --%>
+<%-- Comentarios acerca de la página que tiene que estar dentro de la cosa de login --%>
  <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
@@ -37,7 +37,7 @@ if (si.equals("Excelente")){
               <i class='bx bx-grid-alt'></i>
               <span class="links_name">Panel de control</span>
             </a>
-             <span class="tooltip">Centro de informaciÃ³n</span>
+             <span class="tooltip">Centro de información</span>
           </li>
           <li>
            <a>
@@ -150,30 +150,30 @@ if (si.equals("Excelente")){
          <!--  <br>-->
          <!--</div> -->
       
-         <!--  AquÃ­ va el contenido de todo lo que quieran poner -->
+         <!--  Aquí va el contenido de todo lo que quieran poner -->
         
           <div class="row">
             <div class="column">
-              <!-- AquÃ­ va el contenido de todo lo que quieran poner -->
+              <!-- Aquí va el contenido de todo lo que quieran poner -->
 
 
               <div class="rowdos">
                 <div class="columntercera" >
                     
-                    <!--   aquÃ­ va cada uno de los cuadrados que colocaremos  -->
+                    <!--   aquí va cada uno de los cuadrados que colocaremos  -->
                     <div class="cuadradodatos">
                         
-                         <!--   aquÃ­ va un nuevo div de textos  -->
+                         <!--   aquí va un nuevo div de textos  -->
                          <div class="nivel">
                     <%
-                    //////Promedio de los niveles de presiÃ³n de los pacientes
-                    System.out.println("Promedio de presiÃ³n");
+                    //////Promedio de los niveles de presión de los pacientes
+                    System.out.println("Promedio de presión");
 
                     %> 
                          </div>
                     
                          <div class="categoria">
-                            PresiÃ³n
+                            Presión
                          </div>  
 
                     </div>
@@ -248,10 +248,10 @@ if (si.equals("Excelente")){
                 <div class="columntercera" >
                   
 
-                    <!--   aquÃ­ va cada uno de los cuadrados que colocaremos  -->
+                    <!--   aquí va cada uno de los cuadrados que colocaremos  -->
                     <div class="cuadradodatosgluco">
                         
-                        <!--   aquÃ­ va un nuevo div de textos  -->
+                        <!--   aquí va un nuevo div de textos  -->
                         <div class="nivelgluco">
                     <%
                     //////Promedio de niveles de azucar de los pacientes
@@ -272,15 +272,15 @@ if (si.equals("Excelente")){
 
                     <div class="cuadradodatosblancostratamientos">
                     <%
-                    //////mÃ©todos de agarrar datos de doctores total de citas
-                    System.out.println("NÃºmero de citas totales");
+                    //////métodos de agarrar datos de doctores total de citas
+                    System.out.println("Número de citas totales");
 
                     %> 
                      Citas pendientes
                         <div class="niveldetratados">
                     <%
-                    //////mÃ©todos de agarrar datos de doctores total de citas
-                    System.out.println("NÃºmero de citas totales");
+                    //////métodos de agarrar datos de doctores total de citas
+                    System.out.println("Número de citas totales");
 
                     %> 
                             <div class="ojo">
@@ -293,15 +293,15 @@ if (si.equals("Excelente")){
 
                     <div class="cuadradodatosblancostratamientos">
                     <%
-                    //////mÃ©todos de agarrar datos de pacientes tipo 1
-                    System.out.println("NÃºmero de pacientes tipo 1");
+                    //////métodos de agarrar datos de pacientes tipo 1
+                    System.out.println("Número de pacientes tipo 1");
 
                     %> 
                      Paciente tipo 1
                         <div class="niveldetratadosaz">
                     <%
-                    //////mÃ©todos de agarrar datos de pacientes tipo 1
-                    System.out.println("NÃºmero de pacientes tipo 1");
+                    //////métodos de agarrar datos de pacientes tipo 1
+                    System.out.println("Número de pacientes tipo 1");
 
                     %>
                             <div class="ojo">
@@ -314,14 +314,14 @@ if (si.equals("Excelente")){
                 </div>
                 <div class="columntercera">
 
-                  <!--   aquÃ­ va cada uno de los cuadrados que colocaremos  -->
+                  <!--   aquí va cada uno de los cuadrados que colocaremos  -->
                   <div class="cuadradodatosdos">
                         
-                    <!--   aquÃ­ va un nuevo div de textos  -->
+                    <!--   aquí va un nuevo div de textos  -->
                     <div class="niveldos">
                      <%
-                    //////mÃ©todos de agarrar datos de doctores (numero de citas)
-                    System.out.println("NÃºmero de citas totales");
+                    //////métodos de agarrar datos de doctores (numero de citas)
+                    System.out.println("Número de citas totales");
              
                     %>
                     </div>
@@ -339,15 +339,15 @@ if (si.equals("Excelente")){
 
                     <div class="cuadradodatosblancostratamientos">
                     <%
-                    //////mÃ©todos de agarrar datos de pacientes afiliados al doctor
-                    System.out.println("NÃºmero de pacientes tipo 3");
+                    //////métodos de agarrar datos de pacientes afiliados al doctor
+                    System.out.println("Número de pacientes tipo 3");
              
                     %>
                       pacientes tipo 1
                         <div class="niveldetratatres">
                     <%
-                    //////mÃ©todos de agarrar datos de pacientes afiliados al doctor
-                    System.out.println("NÃºmero de pacientes tipo 3");
+                    //////métodos de agarrar datos de pacientes afiliados al doctor
+                    System.out.println("Número de pacientes tipo 3");
              
                     %>
                             <div class="ojo">
@@ -360,15 +360,15 @@ if (si.equals("Excelente")){
 
                     <div class="cuadradodatosblancostratamientos">
                     <%
-                    //////mÃ©todos de agarrar datos de pacientes afiliados al doctor
-                    System.out.println("NÃºmero de pacientes sin tratamientos");
+                    //////métodos de agarrar datos de pacientes afiliados al doctor
+                    System.out.println("Número de pacientes sin tratamientos");
              
                     %>
                       Sin tratamiento
                         <div class="niveldetratatresver">
                     <%
-                    //////mÃ©todos de agarrar datos de pacientes afiliados al doctor
-                    System.out.println("NÃºmero de pacientes sin tratamientos");
+                    //////métodos de agarrar datos de pacientes afiliados al doctor
+                    System.out.println("Número de pacientes sin tratamientos");
              
                     %>
                            
@@ -383,25 +383,25 @@ if (si.equals("Excelente")){
               </div>
 
 
-                 <!-- AquÃ­ va la supuesta grafica  -->
+                 <!-- Aquí va la supuesta grafica  -->
               <div class="grafica">
 
 
                
               
               </div>
-                <!-- AquÃ­ va la supuesta grafica  -->
+                <!-- Aquí va la supuesta grafica  -->
 
             </div>
             <div class="columna2">
-              <!-- AquÃ­ va el contenido de todo lo que quieran poner -->
+              <!-- Aquí va el contenido de todo lo que quieran poner -->
                
                 
                 <div class="recuadrogris">
                   
                     
                     <%
-                    //////mÃ©todos de agarrar nombre de mi docto
+                    //////métodos de agarrar nombre de mi docto
                     System.out.println("Nombre del doctor");
                     %>
                     <br>
@@ -425,7 +425,7 @@ if (si.equals("Excelente")){
                      out.println("<br>");
                      
 
-                   /// cierre de la condiciÃ³n
+                   /// cierre de la condición
                     %>
                     }
                   
@@ -439,7 +439,7 @@ if (si.equals("Excelente")){
           
                     <div class="cuadradonotideabajo">
           
-                      Recibe notificaciones sobre tus pacientes y prÃ³ximas citas
+                      Recibe notificaciones sobre tus pacientes y próximas citas
 
                   </div>
 
@@ -488,7 +488,7 @@ if (si.equals("Excelente")){
 }else{
     if(si.equals("PassIn")){
 %>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
   <head>
@@ -504,7 +504,7 @@ if (si.equals("Excelente")){
 
 <!-- HTML !-->
 
-<div class="ahche">ContraseÃ±a incorrecta</div>
+<div class="ahche">Contraseña incorrecta</div>
 <form action="inicioSesionDoctor2.jsp" method="post">
     
     <input type="text" name="CEDULA" value="<%=Cedula%>" class="forminvitex"><br>
@@ -514,7 +514,7 @@ if (si.equals("Excelente")){
     </body>
 </html>
 <%}else{%>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
   <head>

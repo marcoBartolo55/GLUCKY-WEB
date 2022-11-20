@@ -1,16 +1,11 @@
 <%@page import="Clases.Pacientes"%>
 <%!Pacientes pa;
-String Curp,Pass;
-String si;%>
+String Curp;%>
 <%
     pa = new Pacientes();
-    Curp = request.getParameter("CurpForm");
-    Pass = request.getParameter("PassForm");
-    si= pa.LoginPacientes(Curp,Pass);
-    if(si.equals("Excelente")){
-        pa=pa.obtenerPa(Curp);
+    Curp = request.getParameter("CURP");
+    pa=pa.obtenerPa(Curp);
   %>
-
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
@@ -58,7 +53,7 @@ String si;%>
        <span class="tooltip">Buscar doctores</span>
      </li>
      <li>
-       <a>
+       <a href="#">
          <i class='bx bx-chat' ></i>
          <span class="links_name">Chateo con doctor</span>
        </a>
@@ -77,7 +72,7 @@ String si;%>
        <span class="tooltip">Mensajes de mi doctor</span>
      </li>
      <li>
-       <a>
+       <a href="#">
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Niveles</span>
        </a>
@@ -96,7 +91,7 @@ String si;%>
        <span class="tooltip">Estado</span>
      </li>
      <li>
-       <a>
+       <a href="#">
          <i class='bx bx-food-menu' ></i>
          <span class="links_name">Dietas</span>
        </a>
@@ -115,7 +110,7 @@ String si;%>
        <span class="tooltip">Ver dietas</span>
      </li>
      <li>
-       <a>
+       <a href="#">
          <i class='bx bx-book-bookmark' ></i>
          <span class="links_name">Citas</span>
        </a>
@@ -134,7 +129,7 @@ String si;%>
        <span class="tooltip">Ver mi agenda de citas</span>
      </li>
      <li>
-       <a>
+       <a href="#">
          <i class='bx bx-heart' ></i>
          <span class="links_name">Tratamientos</span>
        </a>
@@ -421,63 +416,4 @@ String si;%>
   </script>
 </body>
 </html>
-<%
-    }else{
-        if(si.equals("PassIn")){
-%>
-<!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
-    <link rel="stylesheet" href="../css/botonEmergenteDoct.css">
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<body>
-
-<!-- HTML !-->
-
-<div class="ahche">Contraseña incorrecta</div>
-<form action="inicioSesionPacientes2.jsp" method="post">
-    
-    <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
-            
-    <input type="submit" value="Aceptar" class="button-9">
-  </form>
-    </body>
-</html>
- <%}else{%>
- <!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
-    <link rel="stylesheet" href="../css/botonEmergenteDoct.css">
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<body>
-
-<!-- HTML !-->
-
-<div class="ahche">Cedula no registrada</div>
-<form action="../html/inicioSesionPacientes.html">
-    
-    <input type="text" class="forminvitex"><br>
-            
-    <input type="submit" value="Aceptar" class="button-9">
-  </form>
-    </body>
-</html>
-<%
-    }
-}
-%>
 
