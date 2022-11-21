@@ -77,7 +77,7 @@ public class Pacientes {
     }
 
 
-    public void registrarPacientes(Pacientes pa){
+    public boolean registrarPacientes(Pacientes pa){
         Connection con;
         Conexion a = new Conexion(); 
        try{
@@ -86,8 +86,10 @@ public class Pacientes {
        st.executeUpdate("INSERT INTO paciente VALUES('"+pa.getCurp()+"','"+pa.getEmail()+"','"+pa.getPass()+"','"+pa.getNombre()+"','"
        +pa.getApellidos()+"','"+pa.getSexo()+"','"+pa.getEdad()+"','"+pa.getTipoDiabetes()+"','"+pa.getTelefono()+"')");
        ResultSet rs = st.executeQuery("SELECT * FROM paciente");
+       return true;
        }catch(Exception e){
            System.out.println("Error: " + e);
+           return false;
        }
     }
     public String LoginPacientes(String Curp,String Pass ){
@@ -97,12 +99,9 @@ public class Pacientes {
         try{
             con =a.Conectar();
             Statement st = con.createStatement();
-            st=con.createStatement();
             ResultSet rs =st.executeQuery("SELECT * FROM paciente WHERE Curp = '"+Curp+"'");
             System.out.println(rs.next());
-            System.out.println(rs.getString("Curp"));
             if(rs.getString("Curp").equals(Curp)){
-                System.out.println("Si entro pa");
                 String pas = rs.getString("Pass");
                 if(pas.equals(Pass)){
                     b="Excelente";
@@ -128,7 +127,6 @@ public class Pacientes {
        try{
            con =a.Conectar();
            Statement st1 = con.createStatement();
-           st1=con.createStatement();
            ResultSet rs1 =st1.executeQuery("SELECT * FROM paciente_doctor WHERE Curp = '"+Curp+"'"); 
            if(rs1.next()==true){
                 if(rs1.getString("Conectado").equals("espera")){
@@ -157,8 +155,9 @@ public class Pacientes {
             try{
                 con =a.Conectar();
                 Statement st1 = con.createStatement();
-                ResultSet rs1 =st1.executeQuery("SELECT * FROM doctor WHERE Cedula = '"+Cedula+"'");
-                if(rs1.getString("Cedula").equals(Cedula)){
+                ResultSet rs2 =st1.executeQuery("SELECT * FROM doctor WHERE Cedula = '"+Cedula+"'");
+                if(rs2.next()){
+                if(rs2.getString("Cedula").equals(Cedula)){
                     Statement st = con.createStatement();
                     st.executeUpdate("INSERT INTO paciente_doctor VALUES('"+Curp+"','"+Cedula+"','"+Con+"')");
                     ResultSet rs = st.executeQuery("SELECT * FROM paciente_doctor");
@@ -166,6 +165,7 @@ public class Pacientes {
                 }
                 else{
                     c="NoSeSoli";
+                }
                 }
             }catch(Exception e){
                 System.out.println("Error: " + e);
