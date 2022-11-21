@@ -206,7 +206,7 @@ public class Doctores {
             con =a.Conectar();
             Statement st = con.createStatement();
             st=con.createStatement();
-            st.execute("UPDATE paciente_doctor SET Conectado = 'denegada' WHERE Curp = '"+Curp+"'");
+            st.executeUpdate("UPDATE paciente_doctor SET Conectado = 'denegada' WHERE Curp = '"+Curp+"'");
         }catch(Exception e){
             System.out.println("Error" + e);
         }
