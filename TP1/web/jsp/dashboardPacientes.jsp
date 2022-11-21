@@ -11,6 +11,7 @@ String Curp;%>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
+  <a href="dashboardPacientes.jsp"></a>
     <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
     <link rel="stylesheet" href="../css/dashboardPacientes.css">
     <!-- Boxicons CDN Link -->

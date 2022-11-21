@@ -45,7 +45,7 @@ String si;%>
        </a>
        <!-- Inicio del form-->
 
-       <form action="../jsp/conectarmeoVerDoctores.jsp" method="post" class="forminvi" >
+       <form action="conectarmeoVerDoctores.jsp" method="post" class="forminvi" >
                     
         <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
       

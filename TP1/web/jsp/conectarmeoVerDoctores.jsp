@@ -165,7 +165,7 @@ pa = pa.obtenerPa(Curp);%>
              </div>
            </div>
          </div>
-             <a hidden="../index.html"><i class='bx bx-log-out' id="log_out" ></i>
+             <a hidden="../index.html"><i class='bx bx-log-out' id="log_out" ></i></a>
      </li>
     </ul>
   </div>

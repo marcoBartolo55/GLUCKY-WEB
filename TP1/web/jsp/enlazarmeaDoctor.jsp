@@ -179,7 +179,7 @@ pa = pa.obtenerPa(Curp);%>
              <div class="job">Paciente</div>
            </div>
          </div>
-               <a href="../index.html"><i class='bx bx-log-out' id="log_out" ></i>
+               <a href="../index.html"><i class='bx bx-log-out' id="log_out" ></i></a>
      </li>
     </ul>
   </div>
