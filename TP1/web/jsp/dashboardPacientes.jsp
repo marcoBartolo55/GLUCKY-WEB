@@ -53,7 +53,7 @@ String Curp;%>
        <span class="tooltip">Buscar doctores</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-chat' ></i>
          <span class="links_name">Chateo con doctor</span>
        </a>
@@ -72,7 +72,7 @@ String Curp;%>
        <span class="tooltip">Mensajes de mi doctor</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Niveles</span>
        </a>
@@ -91,7 +91,7 @@ String Curp;%>
        <span class="tooltip">Estado</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-food-menu' ></i>
          <span class="links_name">Dietas</span>
        </a>
@@ -129,7 +129,7 @@ String Curp;%>
        <span class="tooltip">Ver mi agenda de citas</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-heart' ></i>
          <span class="links_name">Tratamientos</span>
        </a>
@@ -157,7 +157,7 @@ String Curp;%>
              <div class="job">Paciente</div>
            </div>
          </div>
-         <i class='bx bx-log-out' id="log_out" ></i>
+               <a href="../index.html"><i class='bx bx-log-out' id="log_out" ></i></a>
      </li>
     </ul>
   </div>

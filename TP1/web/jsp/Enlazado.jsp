@@ -7,7 +7,10 @@ String si;%>
   Cedula = request.getParameter("CedulaForm");
   Con = "espera";
   pa = new Pacientes();
-  si = pa.Enlace(Curp,Cedula,Con);
+  si = pa.EnlaceVeri(Curp);
+  System.out.println(si);
+  si = pa.Enlace(si,Curp,Cedula,Con);
+  System.out.println(si);
   if(si.equals("EnEspe")){
 %>
 
@@ -40,7 +43,7 @@ String si;%>
 </body>
 </html>
 <%}else{
-    if(si.equals("Acep")){
+    if(si.equals("aceptada")){
 %>
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
@@ -135,7 +138,8 @@ Su solicitud ya fue aceptada por el Doctor
 
 </body>
 </html>
-<%}else{%>
+<%}else{
+if(si.equals("NoSeSoli")){%>
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
@@ -162,5 +166,6 @@ Su solicitud ya fue aceptada por el Doctor
 <%          }
         }
     }
+}
 }
 %>

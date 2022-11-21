@@ -1,16 +1,11 @@
 <%@page import="Clases.Doctores" %>
 <%!Doctores doc;
-String Cedula,Pass;
-String si;%>
-<%
-doc= new Doctores();
-Cedula=request.getParameter("CedulaForm");
-Pass=request.getParameter("PassForm");
-si=doc.LoginDoctores(Cedula,Pass);
-if (si.equals("Excelente")){
-    doc=doc.obtenerD(Cedula);
-%>
-<%-- Comentarios acerca de la página que tiene que estar dentro de la cosa de login --%>
+String Cedula;%>
+<%doc= new Doctores();
+Cedula=request.getParameter("CEDULA");
+doc=doc.obtenerD(Cedula);%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
@@ -37,7 +32,7 @@ if (si.equals("Excelente")){
               <i class='bx bx-grid-alt'></i>
               <span class="links_name">Panel de control</span>
             </a>
-             <span class="tooltip">Centro de información</span>
+             <span class="tooltip">Centro de informaciÃ³n</span>
           </li>
           <li>
            <a>
@@ -150,30 +145,30 @@ if (si.equals("Excelente")){
          <!--  <br>-->
          <!--</div> -->
       
-         <!--  Aquí va el contenido de todo lo que quieran poner -->
+         <!--  AquÃ­ va el contenido de todo lo que quieran poner -->
         
           <div class="row">
             <div class="column">
-              <!-- Aquí va el contenido de todo lo que quieran poner -->
+              <!-- AquÃ­ va el contenido de todo lo que quieran poner -->
 
 
               <div class="rowdos">
                 <div class="columntercera" >
                     
-                    <!--   aquí va cada uno de los cuadrados que colocaremos  -->
+                    <!--   aquÃ­ va cada uno de los cuadrados que colocaremos  -->
                     <div class="cuadradodatos">
                         
-                         <!--   aquí va un nuevo div de textos  -->
+                         <!--   aquÃ­ va un nuevo div de textos  -->
                          <div class="nivel">
                     <%
-                    //////Promedio de los niveles de presión de los pacientes
-                    System.out.println("Promedio de presión");
+                    //////Promedio de los niveles de presiÃ³n de los pacientes
+                    System.out.println("Promedio de presiÃ³n");
 
                     %> 
                          </div>
                     
                          <div class="categoria">
-                            Presión
+                            PresiÃ³n
                          </div>  
 
                     </div>
@@ -248,10 +243,10 @@ if (si.equals("Excelente")){
                 <div class="columntercera" >
                   
 
-                    <!--   aquí va cada uno de los cuadrados que colocaremos  -->
+                    <!--   aquÃ­ va cada uno de los cuadrados que colocaremos  -->
                     <div class="cuadradodatosgluco">
                         
-                        <!--   aquí va un nuevo div de textos  -->
+                        <!--   aquÃ­ va un nuevo div de textos  -->
                         <div class="nivelgluco">
                     <%
                     //////Promedio de niveles de azucar de los pacientes
@@ -272,15 +267,15 @@ if (si.equals("Excelente")){
 
                     <div class="cuadradodatosblancostratamientos">
                     <%
-                    //////métodos de agarrar datos de doctores total de citas
-                    System.out.println("Número de citas totales");
+                    //////mÃ©todos de agarrar datos de doctores total de citas
+                    System.out.println("NÃºmero de citas totales");
 
                     %> 
                      Citas pendientes
                         <div class="niveldetratados">
                     <%
-                    //////métodos de agarrar datos de doctores total de citas
-                    System.out.println("Número de citas totales");
+                    //////mÃ©todos de agarrar datos de doctores total de citas
+                    System.out.println("NÃºmero de citas totales");
 
                     %> 
                             <div class="ojo">
@@ -293,15 +288,15 @@ if (si.equals("Excelente")){
 
                     <div class="cuadradodatosblancostratamientos">
                     <%
-                    //////métodos de agarrar datos de pacientes tipo 1
-                    System.out.println("Número de pacientes tipo 1");
+                    //////mÃ©todos de agarrar datos de pacientes tipo 1
+                    System.out.println("NÃºmero de pacientes tipo 1");
 
                     %> 
                      Paciente tipo 1
                         <div class="niveldetratadosaz">
                     <%
-                    //////métodos de agarrar datos de pacientes tipo 1
-                    System.out.println("Número de pacientes tipo 1");
+                    //////mÃ©todos de agarrar datos de pacientes tipo 1
+                    System.out.println("NÃºmero de pacientes tipo 1");
 
                     %>
                             <div class="ojo">
@@ -314,14 +309,14 @@ if (si.equals("Excelente")){
                 </div>
                 <div class="columntercera">
 
-                  <!--   aquí va cada uno de los cuadrados que colocaremos  -->
+                  <!--   aquÃ­ va cada uno de los cuadrados que colocaremos  -->
                   <div class="cuadradodatosdos">
                         
-                    <!--   aquí va un nuevo div de textos  -->
+                    <!--   aquÃ­ va un nuevo div de textos  -->
                     <div class="niveldos">
                      <%
-                    //////métodos de agarrar datos de doctores (numero de citas)
-                    System.out.println("Número de citas totales");
+                    //////mÃ©todos de agarrar datos de doctores (numero de citas)
+                    System.out.println("NÃºmero de citas totales");
              
                     %>
                     </div>
@@ -339,15 +334,15 @@ if (si.equals("Excelente")){
 
                     <div class="cuadradodatosblancostratamientos">
                     <%
-                    //////métodos de agarrar datos de pacientes afiliados al doctor
-                    System.out.println("Número de pacientes tipo 3");
+                    //////mÃ©todos de agarrar datos de pacientes afiliados al doctor
+                    System.out.println("NÃºmero de pacientes tipo 3");
              
                     %>
                       pacientes tipo 1
                         <div class="niveldetratatres">
                     <%
-                    //////métodos de agarrar datos de pacientes afiliados al doctor
-                    System.out.println("Número de pacientes tipo 3");
+                    //////mÃ©todos de agarrar datos de pacientes afiliados al doctor
+                    System.out.println("NÃºmero de pacientes tipo 3");
              
                     %>
                             <div class="ojo">
@@ -360,15 +355,15 @@ if (si.equals("Excelente")){
 
                     <div class="cuadradodatosblancostratamientos">
                     <%
-                    //////métodos de agarrar datos de pacientes afiliados al doctor
-                    System.out.println("Número de pacientes sin tratamientos");
+                    //////mÃ©todos de agarrar datos de pacientes afiliados al doctor
+                    System.out.println("NÃºmero de pacientes sin tratamientos");
              
                     %>
                       Sin tratamiento
                         <div class="niveldetratatresver">
                     <%
-                    //////métodos de agarrar datos de pacientes afiliados al doctor
-                    System.out.println("Número de pacientes sin tratamientos");
+                    //////mÃ©todos de agarrar datos de pacientes afiliados al doctor
+                    System.out.println("NÃºmero de pacientes sin tratamientos");
              
                     %>
                            
@@ -383,25 +378,25 @@ if (si.equals("Excelente")){
               </div>
 
 
-                 <!-- Aquí va la supuesta grafica  -->
+                 <!-- AquÃ­ va la supuesta grafica  -->
               <div class="grafica">
 
 
                
               
               </div>
-                <!-- Aquí va la supuesta grafica  -->
+                <!-- AquÃ­ va la supuesta grafica  -->
 
             </div>
             <div class="columna2">
-              <!-- Aquí va el contenido de todo lo que quieran poner -->
+              <!-- AquÃ­ va el contenido de todo lo que quieran poner -->
                
                 
                 <div class="recuadrogris">
                   
                     
                     <%
-                    //////métodos de agarrar nombre de mi docto
+                    //////mÃ©todos de agarrar nombre de mi docto
                     System.out.println("Nombre del doctor");
                     %>
                     <br>
@@ -425,7 +420,7 @@ if (si.equals("Excelente")){
                      out.println("<br>");
                      
 
-                   /// cierre de la condición
+                   /// cierre de la condiciÃ³n
                     %>
                     }
                   
@@ -439,7 +434,7 @@ if (si.equals("Excelente")){
           
                     <div class="cuadradonotideabajo">
           
-                      Recibe notificaciones sobre tus pacientes y próximas citas
+                      Recibe notificaciones sobre tus pacientes y prÃ³ximas citas
 
                   </div>
 
@@ -484,62 +479,3 @@ if (si.equals("Excelente")){
   </script>
 </body>
 </html>
-<%
-}else{
-    if(si.equals("PassIn")){
-%>
-<!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
-    <link rel="stylesheet" href="../css/botonEmergenteDoct.css">
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<body>
-
-<!-- HTML !-->
-
-<div class="ahche">Contraseña incorrecta</div>
-<form action="inicioSesionDoctor2.jsp" method="post">
-    
-    <input type="text" name="CEDULA" value="<%=Cedula%>" class="forminvitex"><br>
-            
-    <input type="submit" value="Aceptar" class="button-9">
-  </form>
-    </body>
-</html>
-<%}else{%>
-<!DOCTYPE html>
-<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
-    <link rel="stylesheet" href="../css/botonEmergenteDoct.css">
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<body>
-
-<!-- HTML !-->
-
-<div class="ahche">Cedula no registrada</div>
-<form action="../html/inicioSesionDoctores.html">
-    
-    <input type="text" class="forminvitex"><br>
-            
-    <input type="submit" value="Aceptar" class="button-9">
-  </form>
-    </body>
-</html>
-<%
-    }
-}
-%>

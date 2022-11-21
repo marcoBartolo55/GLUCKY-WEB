@@ -162,7 +162,7 @@ String si;%>
              <div class="job">Paciente</div>
            </div>
          </div>
-         <i class='bx bx-log-out' id="log_out" ></i>
+               <a href="../index.html"> <i class='bx bx-log-out' id="log_out" ></i></a>
      </li>
     </ul>
   </div>
@@ -467,7 +467,7 @@ String si;%>
 
 <!-- HTML !-->
 
-<div class="ahche">Cedula no registrada</div>
+<div class="ahche">Curp no registrado</div>
 <form action="../html/inicioSesionPacientes.html">
     
     <input type="text" class="forminvitex"><br>

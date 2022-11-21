@@ -8,7 +8,8 @@ Pacientes pa;%>
 <%doc = new Doctores();
 rs = doc.pacientesSoli();
 pa = new Pacientes();
-Cedula = request.getParameter("CEDULA");%>
+Cedula = request.getParameter("CEDULA");
+doc = doc.obtenerD(Cedula);%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -31,20 +32,15 @@ Cedula = request.getParameter("CEDULA");%>
         </div>
         <ul class="nav-list">
           <li>
-              <i class='bx bx-search' ></i>
-             <input type="text" placeholder="Buscar...">
-             <span class="tooltip">Buscar en la página</span>
-          </li>
-          <li>
-            <a href="#">
+            <a>
               <i class='bx bx-grid-alt'></i>
               <span class="links_name">Panel de control</span>
             </a>
             <!-- Inicio del form-->
 
-            <form action="#" class="forminvi">
+            <form action="dashboardDoctores.jsp" method="post" class="forminvi">
                     
-              <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
+              <input type="text" name="CEDULA" value="<%=Cedula%>" class="forminvitex"><br>
             
             
               <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -55,15 +51,15 @@ Cedula = request.getParameter("CEDULA");%>
              <span class="tooltip">Centro de información</span>
           </li>
           <li>
-           <a href="#">
+           <a>
              <i class='bx bx-user' ></i>
              <span class="links_name">Pacientes</span>
            </a>
            <!-- Inicio del form-->
 
-           <form action="#" class="forminvi">
+           <form action="#" class="forminvi" method="post">
                     
-            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"><br>
+            <input type="text" name="CEDULA" value="<%=Cedula%>" class="forminvitex"><br>
           
           
             <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -74,15 +70,15 @@ Cedula = request.getParameter("CEDULA");%>
            <span class="tooltip">Buscar pacientes</span>
          </li>
          <li>
-           <a href="#">
+           <a>
              <i class='bx bx-chat' ></i>
              <span class="links_name">Chateo con pacientes</span>
            </a>
            <!-- Inicio del form-->
 
-           <form action="#" class="forminvi">
+           <form action="#" class="forminvi" method="post">
                     
-            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"><br>
+            <input type="text" name="CEDULA" value="<%=Cedula%>" class="forminvitex"><br>
           
           
             <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -94,22 +90,10 @@ Cedula = request.getParameter("CEDULA");%>
          </li>
        
          <li>
-           <a href="#">
+           <a>
              <i class='bx bx-circle' ></i>
              <span class="links_name">Peticiones</span>
            </a>
-           <!-- Inicio del form-->
-
-           <form action="#" class="forminvi">
-                    
-            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
-          
-          
-            <input type="submit" value="Enviarcurp" class="forminvibu">
-            
-          </form> 
-
-<!-- Final del form-->
            <span class="tooltip">Ver peticiones</span>
          </li>
          <li>
@@ -119,9 +103,9 @@ Cedula = request.getParameter("CEDULA");%>
            </a>
            <!-- Inicio del form-->
 
-           <form action="#" class="forminvi">
+           <form action="#" class="forminvi" method="post">
                     
-            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
+               <input type="text" name="CEDULA" value="<%=Cedula%>" class="forminvitex"><br>
           
           
             <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -137,11 +121,11 @@ Cedula = request.getParameter("CEDULA");%>
              <div class="profile-details">
                <!--<img src="profile.jpg" alt="profileImg">-->
                <div class="name_job">
-                 <div class="name">Nombre usuario</div>
+                 <div class="name">Nombre <%=doc.getNombre()%></div>
                  <div class="job">Doctor</div>
                </div>
              </div>
-             <i class='bx bx-log-out' id="log_out" ></i>
+                 <a href="../index.html"><i class='bx bx-log-out' id="log_out" ></i></a>
          </li>
         </ul>
       </div>
@@ -151,7 +135,7 @@ Cedula = request.getParameter("CEDULA");%>
     </div>
    
   <div class="container">
-      <div class="title">Buenos dias usuario</div>
+      <div class="title">Buenos dias <%=doc.getNombre()%> <%=doc.getApellidos()%></div>
       <div class="content">
 
         <br>

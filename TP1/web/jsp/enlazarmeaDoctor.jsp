@@ -86,7 +86,7 @@ pa = pa.obtenerPa(Curp);%>
        <span class="tooltip">Mensajes de mi doctor</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Niveles</span>
        </a>
@@ -107,7 +107,7 @@ pa = pa.obtenerPa(Curp);%>
        <span class="tooltip">Estado</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-food-menu' ></i>
          <span class="links_name">Dietas</span>
        </a>
@@ -128,7 +128,7 @@ pa = pa.obtenerPa(Curp);%>
        <span class="tooltip">Ver dietas</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-book-bookmark' ></i>
          <span class="links_name">Citas</span>
        </a>
@@ -149,7 +149,7 @@ pa = pa.obtenerPa(Curp);%>
        <span class="tooltip">Ver mi agenda de citas</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-heart' ></i>
          <span class="links_name">Tratamientos</span>
        </a>
@@ -179,7 +179,7 @@ pa = pa.obtenerPa(Curp);%>
              <div class="job">Paciente</div>
            </div>
          </div>
-         <i class='bx bx-log-out' id="log_out" ></i>
+               <a href="../index.html"><i class='bx bx-log-out' id="log_out" ></i>
      </li>
     </ul>
   </div>
