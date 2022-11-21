@@ -1,12 +1,13 @@
 <%@page import ="Clases.Doctores" %>
-<%@page import ="Clases.Conexion" %>
+<%@page import ="Clases.Pacientes" %>
 <%@page import ="java.sql.*" %>
 <%!Doctores doc;
 String Cedula,Curp,Nombre,Apellidos;
 ResultSet rs;
-ResultSet rs2;%>
+Pacientes pa;%>
 <%doc = new Doctores();
 rs = doc.pacientesSoli();
+pa = new Pacientes();
 Cedula = request.getParameter("CEDULA");%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -62,7 +63,7 @@ Cedula = request.getParameter("CEDULA");%>
 
            <form action="#" class="forminvi">
                     
-            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
+            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"><br>
           
           
             <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -81,7 +82,7 @@ Cedula = request.getParameter("CEDULA");%>
 
            <form action="#" class="forminvi">
                     
-            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex" disabled  ><br>
+            <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"><br>
           
           
             <input type="submit" value="Enviarcurp" class="forminvibu">
@@ -166,13 +167,11 @@ Cedula = request.getParameter("CEDULA");%>
     <!-- Aquí abre el div de contenido de un doctor -->
     <%while (rs.next()==true){
         if(rs.getString("Cedula").equals(Cedula)){
-    Curp =rs.getString("Curp");
-    System.out.println(Curp);
-    rs2=doc.DatopacienteSoli(Curp);
-        if(rs2.next()==true){
-        Nombre = rs2.getString("Nombre");
-        Apellidos =rs2.getString("Apellidos");
-        }
+        Curp =rs.getString("Curp");
+        pa=pa.obtenerPa(Curp);
+        if(pa!=null){
+        Nombre = pa.getNombre();
+        Apellidos =pa.getApellidos();
     %>
         <div class=doctoresmenu>
             <div class="doctores">
@@ -190,7 +189,7 @@ Cedula = request.getParameter("CEDULA");%>
             </div>
         </div> 
         <div class=cuadradoblancodos>
-            <form action="#" class="formu">
+            <form action="Aceptarpaciente.jsp" class="formu">
               <input type="text"  name="CURP" value="<%=Curp%>" class="forminvitexDOS"   ><br>
               <input type="text"  name="CEDULA" value="<%=Cedula%>" class="forminvitexDOS"   ><br>
             <input type="submit" value="Aceptar" class="formi">
@@ -202,13 +201,13 @@ Cedula = request.getParameter("CEDULA");%>
 
             <form action="#" class="formu3">
               <input type="text" id="CURP" name="CURP" value="#" class="forminvitexDOS" disabled  ><br>
-
-
+              <input type="text"  name="CEDULA" value="<%=Cedula%>" class="forminvitexDOS"   ><br>
             <input type="submit" value="X" class="formi">
             </form>
         </div> 
     <%}
-    }%>
+    }
+   }%>
     <!-- Aquí cierra un div entero de contenido de doctor -->
         
 
