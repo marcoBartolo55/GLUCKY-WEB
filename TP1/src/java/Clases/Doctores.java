@@ -100,7 +100,7 @@ public class Doctores {
         this.NumeroCons = NumeroCons;
     }
 
-    public void registrarDoctores(Doctores doc){
+    public boolean registrarDoctores(Doctores doc){
         Connection con;
         Conexion a = new Conexion(); 
        try{
@@ -110,11 +110,13 @@ public class Doctores {
        +doc.getApellidos()+"','"+doc.getSexo()+"','"+doc.getCalle()+"','"+doc.getNumeroCons()+"','"+doc.getLocalidad()+"','"+doc.getCodigoPostal()+
                "','"+doc.getEdad()+"','"+doc.getTelefono()+"')");
        ResultSet rs = st.executeQuery("SELECT * FROM doctor");
+       return true;
        }catch(Exception e){
            System.out.println("Error: " + e);
+           return false;
        }
     }
-    public boolean LoginDoctores(String Cedula,String Pass ){
+    public String LoginDoctores(String Cedula,String Pass ){
         Connection con;
         Conexion a = new Conexion(); 
         try{
@@ -125,20 +127,18 @@ public class Doctores {
             if(rs.next()==true){
                 String pas = rs.getString("Pass");
                 if(pas.equals(Pass)){
-                    System.out.println("Pasale crack");
-                    return true;
+                    return "Excelente";
                 }
                 else{
-                    System.out.println("Escribe bien tu contraseña pitera");
-                    return false;
+                    return "PassIn";
                 }
             }
             else{
-                System.out.println("No estas registrado puto");}
-            return false;
+            return "NoRegi";
+            }
         }catch(Exception e){
             System.out.println("Error" + e);
-            return false;
+            return null;
         }
     }
     public ResultSet pacientesSoli(){
@@ -156,20 +156,59 @@ public class Doctores {
             return rs;
         }
     }
-    public ResultSet DatopacienteSoli(String Curp){
-    Connection con;
+    public Doctores obtenerD(String Cedula){
+        Connection con;
+        Conexion a = new Conexion();
+        Doctores doc = new Doctores();
+        try{
+            con =a.Conectar();
+            Statement st = con.createStatement();
+            st=con.createStatement();
+            ResultSet rs =st.executeQuery("SELECT * FROM doctor WHERE Cedula = '"+Cedula+"'");
+            if(rs.next()==true){
+                doc.setNombre(rs.getString("Nombre"));
+                doc.setApellidos(rs.getString("Apellidos"));
+                doc.setEmail(rs.getString("Email"));
+                doc.setEdad(rs.getInt("Edad"));
+                doc.setTelefono(rs.getString("Telefono"));
+                doc.setCedula(rs.getString("Cedula"));
+                doc.setCalle(rs.getString("Calle"));
+                doc.setNumeroCons(rs.getInt("NumeroCons"));
+                doc.setCodigoPostal(rs.getInt("CodigoPostal"));
+                doc.setLocalidad(rs.getString("Localidad"));
+                doc.setSexo(rs.getString("Sexo"));
+                return doc;
+            }
+        }catch(Exception e){
+            System.out.println("Error" + e);
+            return doc;
+        }
+        return doc;
+    }
+    public void conexionAceptada(String Curp){
+        Connection con;
         Conexion a = new Conexion();
         ResultSet rs=null;
         try{
             con =a.Conectar();
             Statement st = con.createStatement();
             st=con.createStatement();
-            rs =st.executeQuery("SELECT * FROM paciente WHERE Curp = '"+Curp+"'");
-            System.out.println("Ganamos" + Curp);
-            return rs;
+            st.executeUpdate("UPDATE paciente_doctor SET Conectado = 'aceptada' WHERE Curp = '"+Curp+"'");
         }catch(Exception e){
             System.out.println("Error" + e);
-            return rs;
+        }
+    }
+    public void conexionDenegada(String Curp){
+        Connection con;
+        Conexion a = new Conexion();
+        ResultSet rs=null;
+        try{
+            con =a.Conectar();
+            Statement st = con.createStatement();
+            st=con.createStatement();
+            st.execute("UPDATE paciente_doctor SET Conectado = 'denegada' WHERE Curp = '"+Curp+"'");
+        }catch(Exception e){
+            System.out.println("Error" + e);
         }
     }
 }
