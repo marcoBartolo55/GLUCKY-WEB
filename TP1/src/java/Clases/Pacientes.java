@@ -169,5 +169,17 @@ public class Pacientes {
         }
         return pa;
     }
+    public void eliminarEnla(String Curp){
+        Connection con;
+        Conexion a = new Conexion(); 
+       try{
+        con =a.Conectar();
+       Statement st = con.createStatement();
+       st.executeUpdate("DELETE FROM paciente_doctor WHERE = '"+Curp+"'");
+       ResultSet rs = st.executeQuery("SELECT * FROM paciente_doctor");
+       }catch(Exception e){
+           System.out.println("Error: " + e);
+       }
+    }
     
 }
