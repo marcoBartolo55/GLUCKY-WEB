@@ -1,181 +1,151 @@
-<%-- 
-    Document   : formGlucosaPresionUsuario
-    Created on : 17 nov 2022, 00:27:34
-    Author     : Gonzalo
---%>
-
+<%@page import="Clases.Pacientes"%>
+<%!Pacientes pa;
+String Curp,Pass;
+String si;%>
+<%
+    pa = new Pacientes();
+    Curp = request.getParameter("CURP");
+    pa=pa.obtenerPa(Curp);
+  %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../images/iconoglucky.ico">
     <!--<title> Responsive Sidebar Menu  | CodingLab </title>-->
     <link rel="stylesheet" href="../css/formGlucosaPresionUsuario.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
-<body>
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo_name">Glucky</div>
-        <i class='bx bx-menu' id="btn" ></i>
-    </div>
-    <ul class="nav-list">
-      <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Buscar...">
-         <span class="tooltip">Buscar en la página</span>
-      </li>
-      <li>
-        <a href="#">
+   <body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class='bx bxl-c-plus-plus icon'></i>
+          <div class="logo_name">Glucky</div>
+          <i class='bx bx-menu' id="btn" ></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+        <a>
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Panel de control</span>
         </a>
+          <!-- Inicio del form-->
 
-        <!-- Inicio del form-->
-
-          <form action="#" class="forminvi">
+          <form action="dashboardPacientes.jsp" method="post" class="forminvi">
                     
-          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
-
-
-          <input type="submit" value="Enviarcurp" class="forminvibu">
+            <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"   ><br>
   
-          </form> 
-
+  
+            <input type="submit" value="Enviarcurp" class="forminvibu">
+    
+            </form> 
+  
           <!-- Final del form-->
-
          <span class="tooltip">Centro de información</span>
       </li>
-      <li>
-       <a href="#">
+        <li>
+       <a>
          <i class='bx bx-user' ></i>
          <span class="links_name">Doctores</span>
        </a>
-
        <!-- Inicio del form-->
 
-          <form action="#" class="forminvi">
+       <form action="conectarmeoVerDoctores.jsp" method="post" class="forminvi" >
                     
-          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+        <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
+      
+      
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+        
+      </form> 
 
-
-          <input type="submit" value="Enviarcurp" class="forminvibu">
-  
-          </form> 
-
-          <!-- Final del form-->
-
+<!-- Final del form-->
        <span class="tooltip">Buscar doctores</span>
      </li>
-     <li>
-       <a href="#">
+       <li>
+       <a>
          <i class='bx bx-chat' ></i>
          <span class="links_name">Chateo con doctor</span>
        </a>
-
        <!-- Inicio del form-->
 
-          <form action="#" class="forminvi">
+       <form action="#" method="post" class="forminvi">
                     
-          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+        <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
+      
+      
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+        
+      </form> 
 
-
-          <input type="submit" value="Enviarcurp" class="forminvibu">
-  
-          </form> 
-
-          <!-- Final del form-->
-
+<!-- Final del form-->
        <span class="tooltip">Mensajes de mi doctor</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Niveles</span>
        </a>
-
-       <!-- Inicio del form-->
-
-          <form action="#" class="forminvi">
-                    
-          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
-
-
-          <input type="submit" value="Enviarcurp" class="forminvibu">
-  
-          </form> 
-
-          <!-- Final del form-->
-
        <span class="tooltip">Estado</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-food-menu' ></i>
          <span class="links_name">Dietas</span>
        </a>
-
        <!-- Inicio del form-->
 
-          <form action="#" class="forminvi">
+       <form action="#" method="post" class="forminvi">
                     
-          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+        <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
+      
+      
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+        
+      </form> 
 
-
-          <input type="submit" value="Enviarcurp" class="forminvibu">
-  
-          </form> 
-
-          <!-- Final del form-->
-
+<!-- Final del form-->
        <span class="tooltip">Ver dietas</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-book-bookmark' ></i>
          <span class="links_name">Citas</span>
        </a>
-
        <!-- Inicio del form-->
 
-          <form action="#" class="forminvi">
+       <form action="#" method="post" class="forminvi">
                     
-          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+        <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
+      
+      
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+        
+      </form> 
 
-
-          <input type="submit" value="Enviarcurp" class="forminvibu">
-  
-          </form> 
-
-          <!-- Final del form-->
-
+<!-- Final del form-->
        <span class="tooltip">Ver mi agenda de citas</span>
      </li>
      <li>
-       <a href="#">
+       <a>
          <i class='bx bx-heart' ></i>
          <span class="links_name">Tratamientos</span>
        </a>
-
        <!-- Inicio del form-->
 
-          <form action="#" class="forminvi">
+       <form action="#" method="post" class="forminvi">
                     
-          <input type="text" id="CURP" name="CURP" value="#" class="forminvitex"   ><br>
+        <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
+      
+      
+        <input type="submit" value="Enviarcurp" class="forminvibu">
+        
+      </form> 
 
-
-          <input type="submit" value="Enviarcurp" class="forminvibu">
-  
-          </form> 
-
-          <!-- Final del form-->
-          
+<!-- Final del form-->
        <span class="tooltip">Ver mis tratamientos</span>
      </li>
     
@@ -183,21 +153,22 @@
          <div class="profile-details">
            <!--<img src="profile.jpg" alt="profileImg">-->
            <div class="name_job">
-             <div class="name">Nombre usuario</div>
+               <div class="name"> Nombre: <br> <%=pa.getNombre()%>
+               </div>
              <div class="job">Paciente</div>
            </div>
          </div>
-         <i class='bx bx-log-out' id="log_out" ></i>
+               <a href="../index.html"> <i class='bx bx-log-out' id="log_out" ></i></a>
      </li>
     </ul>
-  </div>
+    </div>
   <section class="home-section">
     <div class="text">
       
     </div>
    
   <div class="container">
-      <div class="title">Buenos dias usuario</div>
+      <div class="title">Buenos dias <%=pa.getNombre()%> <%=pa.getApellidos()%></div>
       <div class="content">
 
         <br>
@@ -207,16 +178,13 @@
           <br>
         </div> 
       
-            <!-- Aquí va el contenido de todo lo que quieran poner -->
+          <!-- Aquí va el contenido de todo lo que quieran poner -->
         
         <div class="row">
             <div class="column">
               <br>
                 <!-- Aquí va el form  -->
                 <div class="center">
-                    <div class="textillo">
-                      Nombre del paciente
-                    </div>
                     <br>
                         <div class=textoarribadosform>
                             Para registrar los datos debes de escribir los resultados arrojados por tus dispositivos
@@ -224,17 +192,17 @@
                         </div> 
                       <form method="post">
                         <div class="txt_field">
-                          <input type="number" required>
+                            <input type="number" min="1" max="999" required>
                           <span></span>
                           <label>Glucosa</label>
                         </div>
                         <div class="txt_field">
-                          <input type="number" required>
+                            <input type="number" min="1" max="999" required> 
                           <span></span>
                           <label>Presión sistolica</label>
                         </div>
                         <div class="txt_field">
-                          <input type="number" required>
+                            <input type="number" min="1" max="999" required>
                           <span></span>
                           <label>Presión diastolica</label>
                         </div>
@@ -285,14 +253,17 @@
   let sidebar = document.querySelector(".sidebar");
   let closeBtn = document.querySelector("#btn");
   let searchBtn = document.querySelector(".bx-search");
+
   closeBtn.addEventListener("click", ()=>{
     sidebar.classList.toggle("open");
     menuBtnChange();//calling the function(optional)
   });
+
   searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
     sidebar.classList.toggle("open");
     menuBtnChange(); //calling the function(optional)
   });
+
   // following are the code to change sidebar button(optional)
   function menuBtnChange() {
    if(sidebar.classList.contains("open")){

@@ -183,8 +183,8 @@ doc = doc.obtenerD(Cedula);%>
 
         <div> ㅤㅤㅤㅤ </div>
 
-            <form action="#" class="formu3">
-              <input type="text" id="CURP" name="CURP" value="#" class="forminvitexDOS" disabled  ><br>
+            <form action="DenegarPaciente.jsp" class="formu3">
+              <input type="text" name="CURP" value="<%=Curp%>" class="forminvitexDOS"><br>
               <input type="text"  name="CEDULA" value="<%=Cedula%>" class="forminvitexDOS"   ><br>
             <input type="submit" value="X" class="formi">
             </form>

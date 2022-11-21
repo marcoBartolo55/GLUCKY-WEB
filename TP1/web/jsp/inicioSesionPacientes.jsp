@@ -83,14 +83,14 @@ String si;%>
        </a>
        <!-- Inicio del form-->
 
-       <form method="post" action="#" class="forminvi">
+       <form action="formGlucosaPresionUsuario.jsp" method="post" class="forminvi" >
                     
         <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
       
       
         <input type="submit" value="Enviarcurp" class="forminvibu">
         
-      </form> 
+      </form>
 
 <!-- Final del form-->
        <span class="tooltip">Estado</span>

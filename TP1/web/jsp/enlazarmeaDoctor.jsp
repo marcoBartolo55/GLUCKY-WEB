@@ -93,14 +93,14 @@ pa = pa.obtenerPa(Curp);%>
        
        <!-- Inicio del form-->
 
-       <form action="#" method="post" class="forminvi">
+       <form action="formGlucosaPresionUsuario.jsp" method="post" class="forminvi" >
                     
         <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
-
-
+      
+      
         <input type="submit" value="Enviarcurp" class="forminvibu">
-
-        </form> 
+        
+      </form>
 
       <!-- Final del form-->
 

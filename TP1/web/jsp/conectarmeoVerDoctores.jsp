@@ -79,14 +79,14 @@ pa = pa.obtenerPa(Curp);%>
        
        <!-- Inicio del form-->
 
-       <form action="#" method="post" class="forminvi">
+       <form action="formGlucosaPresionUsuario.jsp" method="post" class="forminvi" >
                     
         <input type="text" name="CURP" value="<%=Curp%>" class="forminvitex"><br>
-
-
+      
+      
         <input type="submit" value="Enviarcurp" class="forminvibu">
-
-        </form> 
+        
+      </form>
 
       <!-- Final del form-->
 
@@ -165,7 +165,7 @@ pa = pa.obtenerPa(Curp);%>
              </div>
            </div>
          </div>
-             <a hidden="../index.html"><i class='bx bx-log-out' id="log_out" ></i></a>
+             <a href="../index.html"><i class='bx bx-log-out' id="log_out" ></i></a>
      </li>
     </ul>
   </div>
