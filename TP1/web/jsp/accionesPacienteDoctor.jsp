@@ -10,12 +10,12 @@
   <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="../images/iconoglucky.ico">
-    <title>Asiganción de Tratamientos</title>
+    <title>Asiganciï¿½n de Tratamientos</title>
     <link rel="stylesheet" href="../css/accionesPacienteDoctor.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="shortcut icon" href="../img/iconoglucky.ico">
-   </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/iconoglucky.ico">
+  </head>
 <body>
     <div class="sidebar">
         <div class="logo-details">
@@ -25,9 +25,9 @@
         </div>
         <ul class="nav-list">
           <li>
-              <i class='bx bx-search' ></i>
-             <input type="text" placeholder="Buscar...">
-             <span class="tooltip">Buscar en la página</span>
+            <i class='bx bx-search' ></i>
+            <input type="text" placeholder="Buscar...">
+            <span class="tooltip">Buscar en la pï¿½gina</span>
           </li>
           <li>
             <a href="#">
@@ -46,7 +46,7 @@
             </form> 
 
   <!-- Final del form-->
-             <span class="tooltip">Centro de información</span>
+             <span class="tooltip">Centro de informaciï¿½n</span>
           </li>
           <li>
            <a href="#">
@@ -160,12 +160,12 @@
           <br>
         </div> 
       
-          <!-- Aquí va el contenido de todo lo que quieran poner -->
+          <!-- Aquï¿½ va el contenido de todo lo que quieran poner -->
         
         <div class="row">
             <div class="column">
               <br>
-                <!-- Aquí va el form  -->
+                <!-- Aquï¿½ va el form  -->
                 <br>
                 <div class="recuadro2">
                   <div class="imagen5">
@@ -202,7 +202,7 @@
 
                 </div>
                 
-                <!-- Aquí termina el form -->
+                <!-- Aquï¿½ termina el form -->
             </div>
             <div class="column">
                 <br>
