@@ -212,4 +212,27 @@ public class Pacientes {
            System.out.println("Error: " + e);
        }
     }
+    public String ConecDoc(String Curp){
+       Connection con;
+        Conexion a = new Conexion(); 
+        String b="";
+       try{
+           con =a.Conectar();
+           Statement st1 = con.createStatement();
+           ResultSet rs1 =st1.executeQuery("SELECT * FROM paciente_doctor WHERE Curp = '"+Curp+"'"); 
+           if(rs1.next()==true){
+                    if(rs1.getString("Conectado").equals("aceptada")){ 
+                        b=rs1.getString("Cedula");
+                    }
+                    else{
+                        b="no";
+                        
+                    }
+           }
+        }catch(Exception e){
+           System.out.println("Error: " + e);
+           b="no";
+       }
+       return b;
+    }
 }
