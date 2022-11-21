@@ -121,27 +121,58 @@ public class Pacientes {
         }
         return b;
     }
-    public boolean Enlace(String Curp,String Cedula,String Con){
-        Connection con;
+    public String EnlaceVeri(String Curp){
+       Connection con;
         Conexion a = new Conexion(); 
+        String b="";
        try{
            con =a.Conectar();
            Statement st1 = con.createStatement();
            st1=con.createStatement();
-           ResultSet rs1 =st1.executeQuery("SELECT * FROM doctor WHERE Cedula = '"+Cedula+"'");
-           if(rs1.getString("Cedula").equals(Cedula)){
-                Statement st = con.createStatement();
-                st.executeUpdate("INSERT INTO paciente_doctor VALUES('"+Curp+"','"+Cedula+"','"+Con+"')");
-                ResultSet rs = st.executeQuery("SELECT * FROM paciente_doctor");
-                return true;
+           ResultSet rs1 =st1.executeQuery("SELECT * FROM paciente_doctor WHERE Curp = '"+Curp+"'"); 
+           if(rs1.next()==true){
+                if(rs1.getString("Conectado").equals("espera")){
+                   b="EnEspe";
+                }else{
+                    if(rs1.getString("Conectado").equals("aceptada")){
+                        b="aceptada";
+                    }
+                    else{
+                        if(rs1.getString("Conectado").equals("denegada")){
+                        b="Den";
+                        }
+                    }
+                }
             }
-           else{
-               return false;
-           }
-       }catch(Exception e){
+        }catch(Exception e){
            System.out.println("Error: " + e);
-           return false;
+           b="no";
        }
+       return b;
+    }
+    public String Enlace(String Curp,String Cedula,String Con){
+        Connection con;
+        Conexion a = new Conexion(); 
+        String c="";
+            try{
+                con =a.Conectar();
+                Statement st1 = con.createStatement();
+                ResultSet rs1 =st1.executeQuery("SELECT * FROM doctor WHERE Cedula = '"+Cedula+"'");
+                if(rs1.getString("Cedula").equals(Cedula)){
+                    Statement st = con.createStatement();
+                    st.executeUpdate("INSERT INTO paciente_doctor VALUES('"+Curp+"','"+Cedula+"','"+Con+"')");
+                    ResultSet rs = st.executeQuery("SELECT * FROM paciente_doctor");
+                    c="Solici";
+                }
+                else{
+                    c="NoSeSoli";
+                }
+            }catch(Exception e){
+                System.out.println("Error: " + e);
+                c="a";
+            }
+
+        return c;
     }
     public Pacientes obtenerPa(String Curp){
     Connection con;
