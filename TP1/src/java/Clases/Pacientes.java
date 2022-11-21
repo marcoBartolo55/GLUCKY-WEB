@@ -90,10 +90,10 @@ public class Pacientes {
            System.out.println("Error: " + e);
        }
     }
-    public boolean LoginPacientes(String Curp,String Pass ){
+    public String LoginPacientes(String Curp,String Pass ){
         Connection con;
         Conexion a = new Conexion(); 
-        boolean b = true;
+        String b ="";
         try{
             con =a.Conectar();
             Statement st = con.createStatement();
@@ -105,24 +105,20 @@ public class Pacientes {
                 System.out.println("Si entro pa");
                 String pas = rs.getString("Pass");
                 if(pas.equals(Pass)){
-                    b=true;
+                    b="Excelente";
                 }
                 else{
-                    b=false;
+                    b="PassIn";
                 }
             }
             else{
-                System.out.println("Paso");
-                
-                b=false;
+                b="no";
                 
             }
         }catch(Exception e){
             System.out.println("Error" + e);
-            b = false;
+            b ="no";
         }
-        System.out.println(b);
-        System.out.println("Ya lo envie pa");
         return b;
     }
     public boolean Enlace(String Curp,String Cedula,String Con){
@@ -133,12 +129,8 @@ public class Pacientes {
            Statement st1 = con.createStatement();
            st1=con.createStatement();
            ResultSet rs1 =st1.executeQuery("SELECT * FROM doctor WHERE Cedula = '"+Cedula+"'");
-           System.out.println(rs1.next());
-           System.out.println(rs1.getString("Cedula"));
            if(rs1.getString("Cedula").equals(Cedula)){
-                System.out.println("Si entro pa");
                 Statement st = con.createStatement();
-                System.out.println("Cedula: "+Cedula+"\nCurp: "+Curp);
                 st.executeUpdate("INSERT INTO paciente_doctor VALUES('"+Curp+"','"+Cedula+"','"+Con+"')");
                 ResultSet rs = st.executeQuery("SELECT * FROM paciente_doctor");
                 return true;
@@ -150,6 +142,32 @@ public class Pacientes {
            System.out.println("Error: " + e);
            return false;
        }
+    }
+    public Pacientes obtenerPa(String Curp){
+    Connection con;
+        Conexion a = new Conexion();
+        Pacientes pa = new Pacientes();
+        try{
+            con =a.Conectar();
+            Statement st = con.createStatement();
+            st=con.createStatement();
+            ResultSet rs =st.executeQuery("SELECT * FROM paciente WHERE Curp = '"+Curp+"'");
+            if(rs.next()==true){
+                pa.setCurp(rs.getString("Curp"));
+                pa.setEmail(rs.getString("Email"));
+                pa.setNombre(rs.getString("Nombre"));
+                pa.setApellidos(rs.getString("Apellidos"));
+                pa.setSexo(rs.getString("Sexo"));
+                pa.setTelefono(rs.getString("Telefono"));
+                pa.setEdad(rs.getInt("Edad"));
+                pa.setTipoDiabetes(rs.getInt("Tipodiabetes"));
+                return pa;
+            }
+        }catch(Exception e){
+            System.out.println("Error" + e);
+            return pa;
+        }
+        return pa;
     }
     
 }
