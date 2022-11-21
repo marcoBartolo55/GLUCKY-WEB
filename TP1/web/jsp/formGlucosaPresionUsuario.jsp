@@ -190,29 +190,34 @@ String si;%>
                             Para registrar los datos debes de escribir los resultados arrojados por tus dispositivos
                             <br>
                         </div> 
-                      <form method="post">
+                    <form method="post" action="Registrodenivel.jsp">
+                          <div class="txt_field">
+                              <input type="text" value="<%=Curp%>" name="CurpForm" required>
+                          <span></span>
+                          <label>Curp</label>
+                        </div>
                         <div class="txt_field">
-                            <input type="number" min="1" max="999" required>
+                            <input type="number" min="1" max="999" name="GlucosaForm" required>
                           <span></span>
                           <label>Glucosa</label>
                         </div>
                         <div class="txt_field">
-                            <input type="number" min="1" max="999" required> 
+                            <input type="number" min="1" max="999" name="PresiSis" required> 
                           <span></span>
                           <label>Presión sistolica</label>
                         </div>
                         <div class="txt_field">
-                            <input type="number" min="1" max="999" required>
+                            <input type="number" min="1" max="999" name="PresiDias" required>
                           <span></span>
                           <label>Presión diastolica</label>
                         </div>
                         <div class="txt_field">
                           <label for="cars"></label>
 
-<select name="comer" id="comida" class="select">
-  <option value="antdecom">Antes de comer</option>
-  <option value="despdecom">Después de comer</option>
-  <option value="ayun">Ayunas</option>
+<select name="comer" class="select">
+  <option value="Antes de comer">Antes de comer</option>
+  <option value="Despues de comer">Despues de comer</option>
+  <option value="Ayunas">Ayunas</option>
 
 </select>
                           <span></span>

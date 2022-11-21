@@ -1,7 +1,7 @@
 <%@page import="Clases.Pacientes"%>
 <%!Pacientes pa;
 String Curp,Cedula,Con;
-String si,so;%>
+String so;%>
 <%
   Curp = request.getParameter("CurpFrom");
   Cedula = request.getParameter("CedulaForm");
