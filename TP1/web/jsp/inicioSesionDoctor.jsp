@@ -1,14 +1,19 @@
 <%@page import="Clases.Doctores" %>
+<%@page import="Clases.DatosMedicos" %>
 <%!Doctores doc;
 String Cedula,Pass;
-String si;%>
+String si;
+DatosMedicos niv;
+int[]a;%>
 <%
+niv = new DatosMedicos();
 doc= new Doctores();
 Cedula=request.getParameter("CedulaForm");
 Pass=request.getParameter("PassForm");
 si=doc.LoginDoctores(Cedula,Pass);
 if (si.equals("Excelente")){
     doc=doc.obtenerD(Cedula);
+    a = niv.PromedioGluDoc(Cedula);
 %>
 <%-- Comentarios acerca de la página que tiene que estar dentro de la cosa de login --%>
 <!DOCTYPE html>
@@ -165,11 +170,7 @@ if (si.equals("Excelente")){
                         
                          <!--   aquí va un nuevo div de textos  -->
                          <div class="nivel">
-                    <%
-                    //////Promedio de los niveles de presión de los pacientes
-                    System.out.println("Promedio de presión");
-
-                    %> 
+                    <%=a[1]%> 
                          </div>
                     
                          <div class="categoria">
@@ -253,11 +254,7 @@ if (si.equals("Excelente")){
                         
                         <!--   aquí va un nuevo div de textos  -->
                         <div class="nivelgluco">
-                    <%
-                    //////Promedio de niveles de azucar de los pacientes
-                    System.out.println("Promedio de niveles de azucar de los pacientes");
-
-                    %> 
+                    <%=a[0]%> 
                         </div>
                    
                         <div class="categoria">

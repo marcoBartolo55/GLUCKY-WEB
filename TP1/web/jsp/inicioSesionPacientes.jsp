@@ -1,13 +1,19 @@
 <%@page import="Clases.Pacientes"%>
+<%@page import="Clases.DatosMedicos" %>
 <%!Pacientes pa;
 String Curp,Pass;
-String si;%>
+String si;
+DatosMedicos niv;
+int[] a;
+%>
 <%
     pa = new Pacientes();
+    niv = new DatosMedicos();
     Curp = request.getParameter("CurpForm");
     Pass = request.getParameter("PassForm");
     si= pa.LoginPacientes(Curp,Pass);
     if(si.equals("Excelente")){
+        a = niv.PromedioGlupa(Curp);
         pa=pa.obtenerPa(Curp);
   %>
 
@@ -198,10 +204,7 @@ String si;%>
                         
                          <!--   aquí va un nuevo div de textos  -->
                          <div class="nivel">
-          <%
-           /////Niveles de presión del paciente
-           System.out.println("Niveles de presión del paciente");
-          %>
+                             <%=a[1]%>
                          </div>
                     
                          <div class="categoria">
@@ -241,10 +244,7 @@ String si;%>
                         
                         <!--   aquí va un nuevo div de textos  -->
                         <div class="nivelgluco">
-          <%
-           //////Nivel de azucar de pacienye promedio
-           System.out.println("Nivel de azucar de pacienye promedio");
-          %> 
+                        <%=a[0]%> 
                         </div>
                    
                         <div class="categoria">
