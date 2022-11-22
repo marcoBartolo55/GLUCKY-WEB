@@ -121,7 +121,7 @@ public class Pacientes {
         return b;
     }
     public String EnlaceVeri(String Curp){
-       Connection con;
+        Connection con;
         Conexion a = new Conexion(); 
         String b="";
        try{
